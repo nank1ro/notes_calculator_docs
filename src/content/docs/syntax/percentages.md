@@ -6,7 +6,7 @@ description: Learn how to use percentages in Notes Calculator.
 ## Getting a percentage of a number
 ```
 10% of 200                      | 20
-25% × 200                       | 50
+200 x 25%                       | 50
 ```
 
 ## Adding a percentage to a number
@@ -40,6 +40,12 @@ description: Learn how to use percentages in Notes Calculator.
 20 as a % of 200                | 10%
 
 20/200 as %                     | 10%
-20/200 %                        | 10%
+20/200%                        | 10%
 ```
 
+## Operations with percentages
+```
+10% + 20%                      | 30%
+90% - 50%                      | 40%
+10% x 20%                      | 2%
+```
