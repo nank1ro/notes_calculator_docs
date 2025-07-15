@@ -21,6 +21,10 @@ export default defineConfig({
           link: '',
         },
         {
+          label: 'Features',
+          autogenerate: { directory: 'features' }
+        },
+        {
           label: 'Syntax',
           autogenerate: { directory: 'syntax' }
         },
