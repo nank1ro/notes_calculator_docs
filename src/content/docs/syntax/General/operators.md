@@ -1,6 +1,8 @@
 ---
 title: Operators
 description: Learn all about operators in Notes Calculator.
+sidebar:
+  order: 1
 ---
 
 ## Operator Symbols
@@ -14,7 +16,7 @@ description: Learn all about operators in Notes Calculator.
 | `^` or `**` or `to the power of` | Raises the first number to the power of the second number |
 | `mod` | Gives you the remainder after a division |
 
-## Examples
+### Examples
 
 ```
 1 plus 1                            | 2
