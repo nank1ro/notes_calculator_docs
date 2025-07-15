@@ -7,7 +7,7 @@ sidebar:
 
 ## Declaring variables
 
-Declare a variable with the equals symbol '='.
+Declare a variable with the equals symbol `=`.
 
 ```
 discount = 10%                         | 10%
@@ -15,7 +15,7 @@ cost =  200€                           | €200
 cost - discount                        | €180
 ```
 
-A variable can be a single word or an entire phrase.
+A variable can be a single word or an entire phrase (i.e. `red apples = 10`).
 
 ## Redefining variables
 
