@@ -40,12 +40,12 @@ description: Learn how to use percentages in Notes Calculator.
 20 as a % of 200                | 10%
 
 20/200 as %                     | 10%
-20/200%                        | 10%
+20/200%                         | 10%
 ```
 
 ## Operations with percentages
 ```
-10% + 20%                      | 30%
-90% - 50%                      | 40%
-10% x 20%                      | 2%
+10% + 20%                       | 30%
+90% - 50%                       | 40%
+10% x 20%                       | 2%
 ```
