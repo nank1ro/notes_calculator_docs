@@ -46,6 +46,6 @@ description: Learn how to use percentages in Notes Calculator.
 ## Operations with percentages
 ```
 10% + 20%                       | 30%
-90% - 50%                       | 40%
+90% - 40%                       | 50%
 10% x 20%                       | 2%
 ```
