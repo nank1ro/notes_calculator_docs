@@ -11,9 +11,9 @@ Type a calculation in the input field (left side), and the result will be displa
 20% of 40                            | 8
 
 100 dollars in euro                  | €85.39
-60 degree in radians                 | 1.047197551 rad
-1 kg in g                            | 1000 g
-1 day in seconds                     | 86400 seconds
+60 degree in radians                 | 1,05 rad
+1 kg in g                            | 1.000 g
+1 day in seconds                     | 86.400 seconds
 
 // You can also use variables: <-- this is a comment, which is ignored
 discount = 10%                       | 10% 

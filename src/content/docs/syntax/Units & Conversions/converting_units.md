@@ -8,9 +8,9 @@ sidebar:
 See all the available units in the [Unit Reference](/syntax/units--conversions/unit_reference/).
 
 ```
-10 km in m                            | 10000 m
+10 km in m                            | 10.000 m
 3 weeks in days                       | 21 days 
-100 pounds in kg                      | 45.36 kg
+100 pounds in kg                      | 45,36 kg
 ```
 
 ## Mixing Units & Plain Numbers
@@ -25,7 +25,7 @@ $20 + 30                              | $50
 
 When doing calculations with mixed unit types, the lowest common unit will be used.
 ```
-1km + 1,000m                          | 2000 m
+1km + 1,000m                          | 2.000 m
 ```
 
 When units don't share a common base unit, the last used unit wins:
