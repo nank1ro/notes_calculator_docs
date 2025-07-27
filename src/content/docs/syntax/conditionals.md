@@ -44,7 +44,7 @@ Logical operators are used to combine multiple conditions. The result is `true` 
 
 ```
 1 == 1 && 2 == 2                      | true
-1 == 1 and 2 != 2                      | false
+1 == 1 and 2 != 2                     | false
 1 == 1 || 2 != 2                      | true
 1 != 1 or 2 != 2                      | false
 ```
