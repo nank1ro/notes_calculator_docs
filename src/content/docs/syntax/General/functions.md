@@ -10,6 +10,9 @@ sidebar:
 | `sqrt()`  | Square Root | Returns the square root of a number (also known as `√`) |
 | `cbrt()`   | Cube Root   | Returns the cube root of a number            |
 | `abs()`   | Absolute value   | Returns the absolute value of a number (i.e makes a negative number positive)            |
+| `round()` | Round   | Returns the nearest integer (half-away-from-zero). Also accepts a second arg for decimal places. |
+| `ceil()`  | Ceiling | Rounds up to the nearest integer |
+| `floor()` | Floor   | Rounds down to the nearest integer |
 | `sin()`   | Sine      | Returns the sine of an angle (in radians)   |
 | `cos()`   | Cosine    | Returns the cosine of an angle (in radians) |
 | `tan()`   | Tangent   | Returns the tangent of an angle (in radians) |
@@ -34,4 +37,10 @@ fact(5)                     | 120
 ln(20)                      | 3
 log2(32)                    | 5
 ln(e)                       | 1
+round(1.5)                  | 2
+ceil(1.1)                   | 2
+floor(1.9)                  | 1
+round(3.14159, 2)           | 3.14
 ```
+
+See the [Rounding](/syntax/rounding/) page for natural-language rounding syntax and more examples.
