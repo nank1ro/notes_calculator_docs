@@ -88,8 +88,29 @@ today in UTC                           | 04/22/2026
 2026-04-22 in America/New_York         | 04/22/2026
 ```
 
-Supported formats: city names (`Tokyo`, `London`, `New_York`) and full IANA
-names (`Asia/Tokyo`, `Europe/London`, `America/New_York`).
+Supported formats:
+
+- City names, single or multi-word: `Tokyo`, `London`, `Los Angeles`, `New York`, `Hong Kong`, `Buenos Aires`, `Ho Chi Minh City`, `Kuala Lumpur`, and ~80 more.
+- Full IANA names: `Asia/Tokyo`, `Europe/London`, `America/New_York`.
+- US abbreviations: `EST`, `EDT`, `CST`, `CDT`, `MST`, `MDT`, `PST`, `PDT`, `AKST`, `AKDT`, `HST`.
+- Named US zones: `eastern time`, `pacific time`, `central time`, `mountain time`, `atlantic time`, `hawaiian time`.
+- Airport codes: `LAX`, `JFK`, `LHR`, `CDG`, `NRT`, `SYD`, `HKG`, and ~60 more.
+- GMT/UTC offsets: `GMT`, `UTC`, `GMT+8`, `UTC-05:30`.
+
+Query the current time in any zone:
+
+```
+time in Tokyo                          | 21:00
+Tokyo time                             | 21:00
+date in Vancouver                      | 04/22/2026
+```
+
+Time difference between zones:
+
+```
+time difference between Tokyo and New York   | 13 hours
+difference between GMT+8 and EST             | 13 hours
+```
 
 ## Duration Formatting
 
