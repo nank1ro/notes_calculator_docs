@@ -97,6 +97,12 @@ Supported formats:
 - Airport codes: `LAX`, `JFK`, `LHR`, `CDG`, `NRT`, `SYD`, `HKG`, and ~60 more.
 - GMT/UTC offsets: `GMT`, `UTC`, `GMT+8`, `UTC-05:30`.
 
+When a zone's calendar day differs from your local day (e.g. late evening in Vienna → next morning in Tokyo), the result includes the date so the day shift is visible:
+
+```
+now in Tokyo                           | 04/24/2026 00:25
+```
+
 Query the current time in any zone:
 
 ```
