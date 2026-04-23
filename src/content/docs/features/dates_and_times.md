@@ -101,3 +101,33 @@ tomorrow - now                         | 11 hours 59 minutes
 ```
 
 Hover over any duration result to see the raw value in seconds.
+
+## ISO 8601 & Unix Timestamps
+
+**ISO 8601 datetime** (with required timezone):
+
+```
+2026-04-22T10:15:00Z                   | 04/22/2026
+2026-04-22T10:15:00+01:00              | 04/22/2026
+```
+
+**Convert between dates and Unix timestamps**:
+
+```
+today to timestamp                     | 1745280000
+1745280000 to date                     | 04/22/2026
+current timestamp                      | 1776859200
+```
+
+Millisecond timestamps (≥ `10^11`) are auto-detected:
+
+```
+1745280000000 to date                  | 04/22/2026
+```
+
+**Format a date as ISO 8601**:
+
+```
+today as iso                           | 2026-04-22T00:00:00.000Z
+2026-04-22T10:15:00Z as iso8601        | 2026-04-22T10:15:00.000Z
+```
