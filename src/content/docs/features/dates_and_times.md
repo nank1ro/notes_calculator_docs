@@ -142,14 +142,14 @@ Hover over any duration result to see the raw value in seconds.
 
 ```
 today to timestamp                     | 1745280000
-1745280000 to date                     | 04/22/2026
+1745280000 to date                     | 04/22/2025
 current timestamp                      | 1776859200
 ```
 
 Millisecond timestamps (≥ `10^11`) are auto-detected:
 
 ```
-1745280000000 to date                  | 04/22/2026
+1745280000000 to date                  | 04/22/2025
 ```
 
 **Format a date as ISO 8601**:
