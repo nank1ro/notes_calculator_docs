@@ -54,3 +54,19 @@ average                          | 2
 2                                | 2
 3                                | 3
 previous                         | 3
+```
+
+## Multi-argument forms
+
+`sum` and `avg` are also available as ordinary multi-argument functions
+when you want to combine specific values rather than the previous
+consecutive lines:
+
+```
+sum(1, 2, 3, 4)                  | 10
+avg(10, 20, 30)                  | 20
+```
+
+See the [Functions](/syntax/general/functions/) page for the full list
+of multi-argument built-ins (`min`, `max`, `clamp`, `median`, `stddev`,
+and more).

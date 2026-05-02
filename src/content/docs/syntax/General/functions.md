@@ -44,3 +44,42 @@ round(3.14159, 2)           | 3.14
 ```
 
 See the [Rounding](/syntax/rounding/) page for natural-language rounding syntax and more examples.
+
+## Multi-argument functions
+
+These functions accept two or more arguments separated by commas.
+
+| Function | Arity | Behaviour |
+| -------- | ----- | --------- |
+| `min(a, b, …)`     | ≥1 | Returns the smallest of its arguments |
+| `max(a, b, …)`     | ≥1 | Returns the largest of its arguments |
+| `clamp(x, lo, hi)` | 3  | Constrains `x` to the range `[lo, hi]`. Errors if `lo > hi` |
+| `log(x, base)`     | 2  | Logarithm of `x` to an arbitrary `base` |
+| `hypot(a, b, …)`   | ≥1 | Returns `√(a² + b² + …)` |
+| `gcd(a, b, …)`     | ≥2 | Greatest common divisor (integers only) |
+| `lcm(a, b, …)`     | ≥2 | Least common multiple (integers only) |
+| `sum(a, b, …)`     | ≥1 | Sum of its arguments |
+| `avg(a, b, …)`     | ≥1 | Arithmetic mean |
+| `median(a, b, …)`  | ≥1 | Median value |
+| `stddev(a, b, …)`  | ≥2 | Sample standard deviation (uses `n−1` denominator) |
+
+### Examples
+```
+min(3, 7, 2)                | 2
+max(3, 7, 2)                | 7
+clamp(15, 0, 10)            | 10
+log(1000, 10)               | 3
+hypot(3, 4)                 | 5
+gcd(12, 18)                 | 6
+lcm(4, 6)                   | 12
+sum(1, 2, 3, 4)             | 10
+avg(1, 2, 3, 4)             | 2.5
+median(1, 2, 3, 4, 5)       | 3
+stddev(2, 4, 4, 4, 5, 5, 7, 9) | 2
+```
+
+`sum` and `avg` also exist as bare keywords that aggregate previous
+consecutive lines — see [Totals and Subtotals](/features/totals_and_subtotals/).
+
+To define your own functions like `f(x) = 2*x + 1`, see
+[User-Defined Functions](/syntax/general/user_functions/).

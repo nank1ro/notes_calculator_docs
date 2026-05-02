@@ -22,3 +22,22 @@ cost - discount                      | €495
 ```
 
 Calculations are performed automatically as you type, and the result is updated in real-time.
+
+## What's new
+
+- [Line References](/features/line_references/) — refer to an earlier line by its number, e.g. `line1`.
+- [User-Defined Functions](/syntax/general/user_functions/) — define your own functions like `f(x) = 2*x + 1`.
+- [Number Bases & Scientific Notation](/syntax/bases_and_scientific/) — hex, binary, octal, and scientific literals plus `in hex` / `as scientific` postfixes.
+
+:::tip[Autocomplete]
+As you type, Notes Calculator suggests units, currencies, constants,
+functions, line references, and timezones. Press **Tab** to accept,
+**↑/↓** to navigate, and **Esc** to dismiss. Toggle in
+**Settings → Completion hints**.
+:::
+
+:::tip[Syntax highlighting]
+Numbers, units, variables, operators, line references, and comments
+are colour-coded, with a palette that adapts to light and dark mode.
+Toggle in **Settings → Syntax highlighting**.
+:::
