@@ -7,6 +7,10 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'Notes Calculator Documentation',
+      logo: {
+        src: './src/assets/logo.png',
+        alt: 'Notes Calculator logo',
+      },
       social: [{ icon: 'laptop', label: 'Website', href: 'https://notescalculator.com' }],
       head: [{
         tag: 'meta',
