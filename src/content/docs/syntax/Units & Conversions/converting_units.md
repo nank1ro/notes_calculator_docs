@@ -15,6 +15,19 @@ See all the available units in the [Unit Reference](/syntax/units--conversions/u
 100 pounds in kg                      | 45,36 kg
 ```
 
+## Wrapping a Value in a Unit
+
+When the left-hand side is a plain number or an expression with no
+source unit, `in <unit>` (or just the unit, with no `in`) attaches the
+unit without conversion. This works for variables, parenthesised
+expressions, and [user-function parameters](/syntax/general/user_functions/).
+
+```
+20 in EUR                             | €20
+(5 + 3) m                             | 8 m
+50 in km                              | 50 km
+```
+
 ## Mixing Units & Plain Numbers
 
 When mixing plain numbers with units, the nearest unit will be used automatically.

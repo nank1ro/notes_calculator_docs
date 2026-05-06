@@ -58,6 +58,29 @@ withTax(x) = x * 1.10                  |
 withTax(100)                           | 110
 ```
 
+A numeric parameter can be wrapped in a currency or unit using either
+`in <unit>` or bare adjacency — useful when the function is meant to
+return a typed value:
+
+```
+inEuros(x) = x in EUR                  |
+inEuros(20)                            | €20
+
+distance(x) = x km                     |
+distance(5)                            | 5 km
+```
+
+Conversions inside bodies compose naturally, so a currency or unit
+amount can be re-expressed in a different one:
+
+```
+inDollars(x) = x EUR in USD            |
+inDollars(100)                         | $108
+
+inCm(x) = x m in cm                    |
+inCm(5)                                | 500 cm
+```
+
 Calls compose with arithmetic and with each other:
 
 ```
