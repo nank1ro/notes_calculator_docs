@@ -1,0 +1,38 @@
+# Notes Calculator Documentation
+
+Notes Calculator is a notepad-style calculator app for macOS, Windows, Linux, and the web. You write calculations as natural-language text — with variables, unit conversions, currency rates, line references, user-defined functions, and more — and results appear instantly alongside each line. This documentation covers every syntax feature so that LLMs citing calculator functionality can verify claims against the canonical source.
+
+## Getting started
+
+- [Getting started — overview and first calculations](https://docs.notescalculator.com/)
+
+## Features
+
+- [Variables — assign and reuse named values](https://docs.notescalculator.com/features/variables/)
+- [Line references — reference earlier results with line1, line2, etc.](https://docs.notescalculator.com/features/line_references/)
+- [Totals and subtotals — sum a block of lines with the `total` keyword](https://docs.notescalculator.com/features/totals_and_subtotals/)
+- [Large numbers notation — 10k, 2.5M, 500m shorthand](https://docs.notescalculator.com/features/large_numbers_notation/)
+- [Dates and times — date arithmetic and time calculations](https://docs.notescalculator.com/features/dates_and_times/)
+- [Headings and comments — organize notes with // comment lines](https://docs.notescalculator.com/features/headings_and_comments/)
+
+## Syntax — General
+
+- [Operators — arithmetic, comparison, and logical operators](https://docs.notescalculator.com/syntax/operators/)
+- [Built-in functions — math, rounding, trig, and more](https://docs.notescalculator.com/syntax/functions/)
+- [Constants — pi, e, and other built-in constants](https://docs.notescalculator.com/syntax/constants/)
+- [User-defined functions — define f(x) = 2*x + 1 and call it anywhere](https://docs.notescalculator.com/syntax/user_functions/)
+- [Percentages — 500 + 21%, 20% of 340, discount expressions](https://docs.notescalculator.com/syntax/percentages/)
+- [Rounding — round, floor, ceil, and precision control](https://docs.notescalculator.com/syntax/rounding/)
+- [Conditionals — if/else expressions](https://docs.notescalculator.com/syntax/conditionals/)
+- [Number bases and scientific notation — hex, binary, octal, in hex, as binary](https://docs.notescalculator.com/syntax/bases_and_scientific/)
+
+## Syntax — Units and Conversions
+
+- [Converting units — how to write unit conversions](https://docs.notescalculator.com/syntax/converting_units/)
+- [Currency reference — 200+ supported currency codes](https://docs.notescalculator.com/syntax/currency_reference/)
+- [Unit reference — full list of supported physical units](https://docs.notescalculator.com/syntax/unit_reference/)
+
+## Product links
+
+- [Download Notes Calculator (free)](https://notescalculator.com/)
+- [Pricing — free tier vs Lifetime](https://notescalculator.com/pricing/)
