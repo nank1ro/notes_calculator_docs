@@ -25,7 +25,7 @@ Calculations are performed automatically as you type, and the result is updated 
 
 ## What's new
 
-- [Decimal Point & Thousands Separators](/syntax/decimal_and_thousands/) — type grouped numbers like `1.234.567`, matching your "Use dot as decimal point" setting.
+- [Decimal Point & Thousands Separators](/syntax/decimal_and_thousands/) — type grouped numbers like `1.234.567` (matching your "Use dot as decimal point" setting) or `1_000_000` with underscores.
 - [Line References](/features/line_references/) — refer to an earlier line by its number, e.g. `line1`.
 - [User-Defined Functions](/syntax/general/user_functions/) — define your own functions like `f(x) = 2*x + 1`.
 - [Number Bases & Scientific Notation](/syntax/bases_and_scientific/) — hex, binary, octal, and scientific literals plus `in hex` / `as scientific` postfixes.

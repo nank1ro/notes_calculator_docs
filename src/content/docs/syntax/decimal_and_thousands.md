@@ -45,6 +45,23 @@ groups the thousands:
   is `1.234`, not `1234` — a lone separator can't be told apart from a decimal
   point, so it is treated as one.
 
+## Underscores for readability
+
+You can also group the digits of a **whole number** with underscores — the same
+trick many programming languages use. Underscores are purely visual, so they
+work the same way whatever your decimal-point setting is:
+
+```
+1_000_000                              | 1.000.000
+123_456_789                            | 123.456.789
+2 * 1_000                              | 2.000
+```
+
+An underscore has to sit **between two digits** — a leading, trailing, or
+doubled underscore (`_1000`, `1000_`, `1__000`) isn't a valid number, so the
+line just stays blank. Underscores group the whole-number part only; they aren't
+read inside the decimal part or an exponent.
+
 ## Inside functions, commas separate arguments
 
 A comma is also how you separate function arguments, so a comma inside a function
