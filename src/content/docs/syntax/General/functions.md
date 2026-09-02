@@ -45,6 +45,28 @@ round(3.14159, 2)           | 3.14
 
 See the [Rounding](/syntax/rounding/) page for natural-language rounding syntax and more examples.
 
+## Roots in words
+
+`square root of` and `cube root of` can be written out, with an optional
+leading `the`:
+
+```
+square root of 16           | 4
+the square root of 16       | 4
+cube root of 27             | 3
+cube root of -27            | -3
+```
+
+The phrase takes only the value right after it, so the rest of the line
+carries on as usual:
+
+```
+square root of 16 + 9       | 13
+cube root of 27 + 3         | 6
+```
+
+Only the full phrase works — `sqrt of 16` isn't recognised, use `sqrt(16)`.
+
 ## Multi-argument functions
 
 These functions accept two or more arguments separated by commas.
