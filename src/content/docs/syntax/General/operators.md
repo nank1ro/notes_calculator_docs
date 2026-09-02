@@ -68,7 +68,7 @@ way it does in maths textbooks and in the system calculator:
 --3                                 | 3
 ```
 
-The typographic minus sign `−` (the one apps like Soulver and Word produce)
+The typographic minus sign `−` (the one word processors often produce)
 works everywhere the plain `-` does, so pasted text calculates:
 
 ```
