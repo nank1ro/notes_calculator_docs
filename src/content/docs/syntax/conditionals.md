@@ -92,8 +92,8 @@ if false then 7                                  | 0
 ```
 
 ```
-inverno = false                                  | false
-if not inverno then 1 else 0                     | 1
+weekend = false                                  | false
+if not weekend then 1 else 0                     | 1
 ```
 
 With no `else`, a false condition gives `0`.
@@ -115,9 +115,9 @@ true xor false ? 10 : 20                         | 10
 Wrap a conditional in brackets and it behaves like any other value:
 
 ```
-inverno = false                                  | false
-93.9 x 1.5 x (if inverno then 1 else 0)          | 0
-93.9 x 1.5 x (inverno ? 1 : 0)                   | 0
+member = true                                    | true
+100 x (if member then 0.9 else 1)                | 90
+100 x (member ? 0.9 : 1)                         | 90
 2 * (5 > 3 ? 10 : 20)                            | 20
 ```
 
@@ -125,9 +125,9 @@ The branches keep their own type, so a conditional can return money or a unit
 amount, not just a plain number:
 
 ```
-inverno = false                                  | false
-inverno ? 10€ : 20€                              | €20
-if inverno then 5 kg else 3 kg                   | 3 kg
+member = false                                   | false
+member ? 10€ : 20€                               | €20
+if member then 5 kg else 3 kg                    | 3 kg
 ```
 
 ## When a condition has no answer

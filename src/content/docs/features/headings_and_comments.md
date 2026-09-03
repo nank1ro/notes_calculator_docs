@@ -60,7 +60,7 @@ The space after the colon is what makes it a label:
 
 - `14:45` is a time, not a label — there is no space after the colon.
 - `Total:100` isn't a label either, so the line stays blank.
-- A ternary's colon is never read as a label: `gas = inverno ? 1 : 0` still
+- A ternary's colon is never read as a label: `gas = member ? 1 : 0` still
   calculates (see [Conditionals](/syntax/conditionals/)).
 - Only the first label on a line is stripped.
 
