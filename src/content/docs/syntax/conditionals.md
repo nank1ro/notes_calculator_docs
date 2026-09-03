@@ -91,9 +91,11 @@ if 0 then 1 else 2                               | 2
 if false then 7                                  | 0
 ```
 
+Hours worked on a normal day:
+
 ```
 weekend = false                                  | false
-if not weekend then 1 else 0                     | 1
+if not weekend then 8 else 0                     | 8
 ```
 
 With no `else`, a false condition gives `0`.
@@ -114,10 +116,12 @@ true xor false ? 10 : 20                         | 10
 
 Wrap a conditional in brackets and it behaves like any other value:
 
+A member discount, for example:
+
 ```
 member = true                                    | true
-100 x (if member then 0.9 else 1)                | 90
-100 x (member ? 0.9 : 1)                         | 90
+$100 x (if member then 0.9 else 1)               | $90
+$100 x (member ? 0.9 : 1)                        | $90
 2 * (5 > 3 ? 10 : 20)                            | 20
 ```
 
@@ -125,9 +129,10 @@ The branches keep their own type, so a conditional can return money or a unit
 amount, not just a plain number:
 
 ```
-member = false                                   | false
-member ? 10€ : 20€                               | €20
-if member then 5 kg else 3 kg                    | 3 kg
+express = true                                   | true
+express ? 15€ : 5€                               | €15
+checked = false                                  | false
+if checked then 23 kg else 8 kg                  | 8 kg
 ```
 
 ## When a condition has no answer
