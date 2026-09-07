@@ -13,7 +13,7 @@ Notes Calculator is a notepad-style calculator app for macOS, Windows, Linux, an
 - [Totals and subtotals — sum a block of lines with the `total` keyword](https://docs.notescalculator.com/features/totals_and_subtotals/)
 - [Large numbers notation — 10k, 2.5M, 500m shorthand](https://docs.notescalculator.com/features/large_numbers_notation/)
 - [Dates and times — date arithmetic and time calculations](https://docs.notescalculator.com/features/dates_and_times/)
-- [Headings and comments — organize notes with // comment lines](https://docs.notescalculator.com/features/headings_and_comments/)
+- [Headings and comments — organize notes with // comments, "quoted" notes, (bracketed) notes, and `Label: ` prefixes](https://docs.notescalculator.com/features/headings_and_comments/)
 
 ## Syntax — General
 
