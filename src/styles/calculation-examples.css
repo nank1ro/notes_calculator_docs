@@ -100,7 +100,7 @@
   background: var(--calc-bg);
   color: var(--calc-text);
   font-family: var(--sl-font), ui-sans-serif, system-ui, sans-serif;
-  font-size: clamp(0.76rem, 1.8vw, 0.9rem);
+  font-size: clamp(0.875rem, 1.8vw, 0.9rem);
   line-height: 1.45;
 }
 
@@ -181,6 +181,11 @@
 .calculation-example .tk-label,
 .calculation-example .tk-heading { color: var(--calc-muted); }
 .calculation-example .tk-heading { font-weight: 700; }
+
+@media (max-width: 34rem), (pointer: coarse) {
+  .calculation-example__copy { min-width: 2.75rem; min-height: 2.75rem; }
+  .calculation-example__titlebar { padding-block: 0.25rem; }
+}
 
 @media (max-width: 34rem) {
   .calculation-example td { padding-right: 0.5rem; }
