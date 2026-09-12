@@ -88,7 +88,7 @@ Conditions can be variables, comparisons, or combinations of them:
 x = 5                                            | 5
 if x > 1 and x < 9 then 1 else 2                 | 1
 if 0 then 1 else 2                               | 2
-if false then 7                                  | 0
+if false then 7                                  | false
 ```
 
 Hours worked on a normal day:
@@ -98,7 +98,7 @@ weekend = false                                  | false
 if not weekend then 8 else 0                     | 8
 ```
 
-With no `else`, a false condition gives `0`.
+With no `else`, a false condition gives `false`.
 
 ## The `? :` shorthand
 

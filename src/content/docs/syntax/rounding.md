@@ -47,9 +47,9 @@ round(3.14159, 2)               | 3.14
 
 ## Rounded to nearest hundred, thousand, or million
 ```
-1234 rounded to nearest hundred     | 1200
-1234 rounded to nearest thousand    | 1000
-1500000 rounded to nearest million  | 2000000
+1234 rounded to nearest hundred     | 1,200
+1234 rounded to nearest thousand    | 1,000
+1500000 rounded to nearest million  | 2,000,000
 ```
 
 ## Units and currency preserved

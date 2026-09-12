@@ -25,7 +25,7 @@ description: Learn how to use percentages in Notes Calculator.
 ```
 20 is 10% of what               | 200
 180 is 10% off what             | 200
-220 is 10% on what              | 200
+220 is 10% on what              | 200.00
 ```
 
 ## Getting the change from one number to another, as a percent

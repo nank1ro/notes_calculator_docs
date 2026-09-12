@@ -22,7 +22,7 @@ With the setting off — comma is the decimal point, dot groups the thousands:
 ```
 1.234.567                              | 1.234.567
 1.234.567,89                           | 1.234.567,89
-18,5                                   | 18,5
+18,5                                   | 18,50
 2 * 1.234.567                          | 2.469.134
 ```
 
@@ -32,7 +32,7 @@ groups the thousands:
 ```
 1,234,567                              | 1,234,567
 1,234,567.89                           | 1,234,567.89
-18.5                                   | 18.5
+18.5                                   | 18.50
 ```
 
 ## It starts from your device's region

@@ -35,8 +35,8 @@ A reference adopts the value type of the line it points to. If line 1 is an
 amount with units or a currency, the reference renders the same way:
 
 ```
-5 miles                                | 5 miles
-line1 + 1                              | 6 miles
+5 miles                                | 5 mi
+line1 + 1                              | 6 mi
 ```
 
 ## Live renumbering
@@ -53,8 +53,8 @@ than raising an error. Arithmetic with a `NaN` reference also yields
 `NaN`.
 
 ```
-line5                                  | (empty — no line 5 yet)
-line2                                  | (empty — self-reference on line 2)
+line5                                  |
+line2                                  |
 ```
 
 ## Word boundaries

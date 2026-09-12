@@ -5,6 +5,9 @@ sidebar:
   order: 5
 ---
 
+The examples in this chapter assume 22 April 2026 at 12:00 UTC and US date
+display.
+
 ## Keywords
 
 Use built-in keywords to refer to common dates and times.
@@ -97,10 +100,12 @@ Supported formats:
 - Airport codes: `LAX`, `JFK`, `LHR`, `CDG`, `NRT`, `SYD`, `HKG`, and ~60 more.
 - GMT/UTC offsets: `GMT`, `UTC`, `GMT+8`, `UTC-05:30`.
 
-When a zone's calendar day differs from your local day (e.g. late evening in Vienna → next morning in Tokyo), the result includes the date so the day shift is visible:
+When a zone's calendar day differs from your local day, the result includes the
+date so the day shift is visible. At this chapter's assumed time, Auckland is on
+the next day:
 
 ```
-now in Tokyo                           | 04/24/2026 00:25
+now in Auckland                        | 04/23/2026 00:00
 ```
 
 Query the current time in any zone:
@@ -124,7 +129,7 @@ A duration result is displayed in human-readable form.
 
 ```
 2026-12-25 - today                     | 247 days
-tomorrow - now                         | 11 hours 59 minutes
+tomorrow - now                         | 12 hours
 ```
 
 Hover over any duration result to see the raw value in seconds.
@@ -134,14 +139,14 @@ Hover over any duration result to see the raw value in seconds.
 **ISO 8601 datetime** (with required timezone):
 
 ```
-2026-04-22T10:15:00Z                   | 04/22/2026
-2026-04-22T10:15:00+01:00              | 04/22/2026
+2026-04-22T10:15:00Z                   | 04/22/2026 10:15
+2026-04-22T10:15:00+01:00              | 04/22/2026 09:15
 ```
 
 **Convert between dates and Unix timestamps**:
 
 ```
-today to timestamp                     | 1745280000
+today to timestamp                     | 1776816000
 1745280000 to date                     | 04/22/2025
 current timestamp                      | 1776859200
 ```
@@ -155,6 +160,6 @@ Millisecond timestamps (≥ `10^11`) are auto-detected:
 **Format a date as ISO 8601**:
 
 ```
-today as iso                           | 2026-04-22T00:00:00.000Z
+today as iso                           | 2026-04-22T00:00:00.000+00:00
 2026-04-22T10:15:00Z as iso8601        | 2026-04-22T10:15:00.000Z
 ```
