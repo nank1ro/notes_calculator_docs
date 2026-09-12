@@ -89,6 +89,69 @@ test('styles line-reference spellings case-insensitively', () => {
   assert.equal((html.match(/class="tk-line-ref"/g) ?? []).length, 5)
 })
 
+test('styles natural-language arithmetic operators as whole keyword phrases', () => {
+  const html = renderCalculationFrame([
+    { input: '2 multiplied by 3', result: '6' },
+    { input: '8 divided by 2', result: '4' },
+    { input: '2 to the power of 3', result: '8' },
+    { input: '2 MULTIPLIED BY 3', result: '6' },
+  ])
+
+  assert.match(html, /<span class="tk-number">2<\/span> <span class="tk-keyword">multiplied by<\/span> <span class="tk-number">3<\/span>/)
+  assert.match(html, /<span class="tk-number">8<\/span> <span class="tk-keyword">divided by<\/span> <span class="tk-number">2<\/span>/)
+  assert.match(html, /<span class="tk-number">2<\/span> <span class="tk-keyword">to the power of<\/span> <span class="tk-number">3<\/span>/)
+  assert.match(html, /<span class="tk-keyword">MULTIPLIED BY<\/span>/)
+})
+
+test('keeps declarations, comments, and longer identifiers ahead of phrase highlighting', () => {
+  const html = renderCalculationFrame([
+    { input: 'multiplied by = 3', result: '3' },
+    { input: 'multiplied by + 1', result: '4' },
+    { input: '// 2 multiplied by 3', result: null },
+    { input: 'premultiplied byproduct', result: null },
+  ])
+
+  assert.equal((html.match(/<span class="tk-variable">multiplied by<\/span>/g) ?? []).length, 2)
+  assert.match(html, /<span class="tk-comment">\/\/ 2 multiplied by 3<\/span>/)
+  assert.match(html, />premultiplied byproduct<\/code>/)
+  assert.doesNotMatch(html, /<span class="tk-keyword">multiplied by<\/span>/)
+})
+
+test('matches native root and long-form percentage quirks', () => {
+  const html = renderCalculationFrame([
+    { input: 'square root of 16', result: '4' },
+    { input: 'cube root of -27', result: '-3' },
+    { input: '20 as a % of 200', result: '10%' },
+    { input: '20 AS A % OF 200', result: '10%' },
+  ])
+
+  assert.match(html, />square root <span class="tk-keyword">of<\/span> <span class="tk-number">16<\/span><\/code>/)
+  assert.match(html, />cube root <span class="tk-keyword">of<\/span> <span class="tk-operator">-<\/span><span class="tk-number">27<\/span><\/code>/)
+  assert.doesNotMatch(html, /class="tk-function">(?:square|cube) root/)
+  assert.match(html, /<span class="tk-keyword">as<\/span> <span class="tk-builtin">a<\/span> <span class="tk-operator">%<\/span>/)
+  assert.match(html, /<span class="tk-keyword">AS<\/span> A <span class="tk-operator">%<\/span>/)
+})
+
+test('keeps lowercase a native-styled in the published parenthetical example', () => {
+  const html = renderCalculationFrame([
+    { input: '1 (a (b) c) + 1', result: '2' },
+  ])
+
+  assert.match(html, /\(<span class="tk-builtin">a<\/span> \(/)
+})
+
+test('keeps percentage query words as separate native keyword spans', () => {
+  const html = renderCalculationFrame([
+    { input: '50 to 75 is what %', result: '50%' },
+    { input: '180 is what % off 200', result: '10%' },
+    { input: '20/200 as %', result: '10%' },
+  ])
+
+  assert.match(html, /<span class="tk-number">50<\/span> <span class="tk-keyword">to<\/span> <span class="tk-number">75<\/span> <span class="tk-keyword">is<\/span> <span class="tk-keyword">what<\/span> <span class="tk-operator">%<\/span>/)
+  assert.match(html, /<span class="tk-number">180<\/span> <span class="tk-keyword">is<\/span> <span class="tk-keyword">what<\/span> <span class="tk-operator">%<\/span> <span class="tk-keyword">off<\/span> <span class="tk-number">200<\/span>/)
+  assert.match(html, /<span class="tk-number">20<\/span><span class="tk-operator">\/<\/span><span class="tk-number">200<\/span> <span class="tk-keyword">as<\/span> <span class="tk-operator">%<\/span>/)
+})
+
 test('remark transformer replaces only qualifying code fences', () => {
   const tree = {
     type: 'root',

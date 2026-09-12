@@ -7,6 +7,12 @@ const KEYWORDS = new Set([
   'of', 'off', 'on', 'is', 'what', 'true', 'false',
 ])
 
+const MULTIWORD_KEYWORDS = [
+  'to the power of',
+  'multiplied by',
+  'divided by',
+]
+
 const FUNCTIONS = new Set([
   'min', 'max', 'clamp', 'log', 'hypot', 'gcd', 'lcm', 'sqrt', 'cbrt', 'abs',
   'round', 'ceil', 'floor', 'sin', 'cos', 'tan', 'ln', 'log2', 'log10', 'acos',
@@ -147,6 +153,11 @@ function escapeRegExp(value) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 }
 
+function caseInsensitivePattern(value) {
+  return escapeRegExp(value).replace(/[A-Za-z]/g, (letter) =>
+    `[${letter.toLowerCase()}${letter.toUpperCase()}]`)
+}
+
 function tokenRegex(userNames) {
   const user = userNames.length
     ? `(?<![A-Za-z0-9_])(?:${userNames.map(escapeRegExp).join('|')})(?![A-Za-z0-9_])`
@@ -156,6 +167,7 @@ function tokenRegex(userNames) {
     '(?<quote>"[^"\\n]*")',
     '(?<base>0[xX][0-9a-fA-F]+|0[bB][01]+|0[oO][0-7]+)',
     `(?<user>${user})`,
+    `(?<phrase>(?<![A-Za-z0-9_])(?:${MULTIWORD_KEYWORDS.map(caseInsensitivePattern).join('|')})(?![A-Za-z0-9_]))`,
     '(?<lineRef>(?:[Ll][Ii][Nn][Ee]|[Ll])\\d+)',
     '(?<number>\\d+(?:_\\d+)*(?:[.,]\\d+)*(?:[eE][+\\-]?\\d+)?(?:[kMGTPEZYRQ](?![A-Za-z]))?[²³⁰¹⁴⁵⁶⁷⁸⁹]?)',
     '(?<currency>[€$¥£₿])',
@@ -180,6 +192,7 @@ function highlightInput(input, regex) {
     if (groups.comment || groups.quote) output += span('comment', groups.comment || groups.quote)
     else if (groups.base) output += span('base', groups.base)
     else if (groups.user) output += span('variable', groups.user)
+    else if (groups.phrase) output += span('keyword', groups.phrase)
     else if (groups.lineRef) output += span('line-ref', groups.lineRef)
     else if (groups.number) output += span('number', groups.number)
     else if (groups.currency) output += span('currency', groups.currency)
@@ -187,7 +200,8 @@ function highlightInput(input, regex) {
     else if (groups.operator) output += span('operator', groups.operator)
     else if (groups.word) {
       const lower = groups.word.toLowerCase()
-      if (KEYWORDS.has(lower)) output += span('keyword', groups.word)
+      if (groups.word === 'a') output += span('builtin', groups.word)
+      else if (KEYWORDS.has(lower)) output += span('keyword', groups.word)
       else if (CURRENCIES.has(lower)) output += span('currency', groups.word)
       else if (groups.word === 'G' || groups.word === 'e') output += span('function', groups.word)
       else if (FUNCTIONS.has(lower)) output += span('function', groups.word)
