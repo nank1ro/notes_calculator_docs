@@ -34,7 +34,7 @@ sqrt(16)                    | 4
 cbrt(27)                    | 3
 abs(-5)                     | 5
 fact(5)                     | 120
-ln(20)                      | 3
+ln(20)                      | 3.00
 log2(32)                    | 5
 ln(e)                       | 1
 round(1.5)                  | 2
@@ -90,14 +90,14 @@ These functions accept two or more arguments separated by commas.
 min(3, 7, 2)                | 2
 max(3, 7, 2)                | 7
 clamp(15, 0, 10)            | 10
-log(1000, 10)               | 3
+log(1000, 10)               | 3.00
 hypot(3, 4)                 | 5
 gcd(12, 18)                 | 6
 lcm(4, 6)                   | 12
 sum(1, 2, 3, 4)             | 10
-avg(1, 2, 3, 4)             | 2.5
+avg(1, 2, 3, 4)             | 2.50
 median(1, 2, 3, 4, 5)       | 3
-stddev(2, 4, 4, 4, 5, 5, 7, 9) | 2
+stddev(2, 4, 4, 4, 5, 5, 7, 9) | 2.14
 ```
 
 `sum` and `avg` also exist as bare keywords that aggregate previous

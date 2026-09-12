@@ -55,7 +55,7 @@ circle(r) = pi * r * r                 |
 circle(2)                              | 12.57
 
 withTax(x) = x * 1.10                  |
-withTax(100)                           | 110
+withTax(100)                           | 110.00
 ```
 
 A numeric parameter can be wrapped in a currency or unit using either
@@ -73,9 +73,12 @@ distance(5)                            | 5 km
 Conversions inside bodies compose naturally, so a currency or unit
 amount can be re-expressed in a different one:
 
+The currency result below uses an illustrative rate of USD 1 = EUR 0.8.
+Live currency results vary with the app's current rate.
+
 ```
 inDollars(x) = x EUR in USD            |
-inDollars(100)                         | $108
+inDollars(100)                         | $125
 
 inCm(x) = x m in cm                    |
 inCm(5)                                | 500 cm

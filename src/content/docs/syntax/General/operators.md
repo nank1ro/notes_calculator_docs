@@ -62,7 +62,7 @@ way it does in maths textbooks and in the system calculator:
 -3^2                                | -9
 -3!                                 | -6
 5 * -3^2                            | -45
-2^-3                                | 0,125
+2^-3                                | 0,13
 -(2+3)                              | -5
 - 3 + 5                             | 2
 --3                                 | 3

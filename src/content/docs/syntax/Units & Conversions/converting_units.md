@@ -40,12 +40,14 @@ $20 + 30                              | $50
 
 When doing calculations with mixed unit types, the lowest common unit will be used.
 ```
-1km + 1,000m                          | 2.000 m
+1km + 1.000m                          | 2.000 m
 ```
 
-When units don't share a common base unit, the last used unit wins:
+When units don't share a common base unit, the last used unit wins. The
+currency result below uses an illustrative rate of USD 1 = EUR 0.8; live
+currency results vary with the app's current rate.
 ```
-$200 + €200                           | €372
+$200 + €200                           | €360
 ```
 
 ## Multiplying Units
