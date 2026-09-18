@@ -6,7 +6,7 @@ sidebar:
 ---
 
 Refer to the value of any earlier line by its line number. References stay
-correct as you insert or delete lines — the numbers are renumbered live.
+correct as you insert or delete lines: the numbers are renumbered live.
 
 ## Referencing a line
 
@@ -21,7 +21,7 @@ L1                                     | 42
 
 ## Use in expressions
 
-Line references behave like any other value — combine them with operators,
+Line references behave like any other value: combine them with operators,
 units, currencies, and other references.
 
 ```
@@ -42,7 +42,7 @@ line1 + 1                              | 6 mi
 ## Live renumbering
 
 Inserting a line above a reference or deleting a line shifts the numbers
-automatically — the text `line1` is rewritten to `line2` (and vice versa)
+automatically: the text `line1` is rewritten to `line2` (and vice versa)
 so that the reference keeps pointing at the same logical line.
 
 ## Cycle and self-reference
@@ -63,6 +63,6 @@ Only the bare `line<N>` and `l<N>` forms are recognised. The parser will
 not match references that are run together with other identifiers or
 contain underscores:
 
-- `line1foo` — not a reference (would need a space)
-- `linear` — not a reference (it's a longer identifier)
-- `l_3` — not a reference (underscores aren't allowed)
+- `line1foo`: not a reference (would need a space)
+- `linear`: not a reference (it's a longer identifier)
+- `l_3`: not a reference (underscores aren't allowed)

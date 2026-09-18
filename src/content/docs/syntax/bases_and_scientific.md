@@ -3,9 +3,9 @@ title: Number Bases & Scientific Notation
 description: Hex, binary, octal, and scientific-notation literals plus display-mode postfixes.
 ---
 
-Notes Calculator accepts numbers written in scientific notation or in
-hexadecimal, binary, and octal — and you can ask any result to render in
-those formats with an `in` / `as` postfix.
+Notes Calculator accepts numbers written in scientific notation, hexadecimal,
+binary, and octal. You can also ask any result to render in those formats with
+an `in` / `as` postfix.
 
 ## Scientific notation literals
 
@@ -51,8 +51,8 @@ Mix bases freely in expressions:
 ## Display postfix: `in` / `as`
 
 Append `in <format>` or `as <format>` to a number or expression to
-choose how the result is displayed. The underlying value is unchanged
-— only the rendering is affected.
+choose how the result is displayed. The underlying value is unchanged.
+Only the rendering is affected.
 
 ```
 255 in hex                             | FF
@@ -73,18 +73,18 @@ parentheses can be used to format an arithmetic result:
 (0b1010 + 5) in binary                 | 1111
 ```
 
-`in hex`, `in binary`, and `in octal` require an integer value —
-non-integers produce an error.
+`in hex`, `in binary`, and `in octal` require an integer value.
+Non-integers produce an error.
 
 ## Global default format
 
 The default format for numeric results is set in **Settings → Number
 format**:
 
-- **Auto** — plain decimal for everyday values; switches to scientific
+- **Auto**: plain decimal for everyday values; switches to scientific
   for very large or very small numbers. (Default.)
-- **Scientific** — every number renders in scientific notation.
-- **Fixed** — every number renders as a plain decimal, never in
+- **Scientific**: every number renders in scientific notation.
+- **Fixed**: every number renders as a plain decimal, never in
   scientific notation.
 
 A per-line `as scientific` / `as fixed` postfix always overrides the

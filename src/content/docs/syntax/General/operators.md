@@ -50,7 +50,7 @@ It multiplies at the same level as `x` and `/`, from left to right, so:
 ```
 
 If the brackets don't contain a calculation they are a note instead, and are
-ignored — `100 (rent)` is `100`. See
+ignored: `100 (rent)` is `100`. See
 [Headings and Comments](/features/headings_and_comments/).
 
 ## The minus sign

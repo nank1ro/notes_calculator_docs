@@ -41,7 +41,7 @@ Logical operators are used to combine multiple conditions. The result is `true` 
 | ------------- | -------- | ---------- |
 | `&&` or `and` | and | Returns true if both conditions are true |
 | `\|\|` or `or` | or | Returns true if at least one condition is true |
-| `not` | not | Flips a condition — true becomes false and back |
+| `not` | not | Flips a condition: true becomes false and back |
 | `xor` | exclusive or | Returns true if exactly one of the two conditions is true |
 
 ```
@@ -52,7 +52,7 @@ Logical operators are used to combine multiple conditions. The result is `true` 
 ```
 
 `not` and `xor` are case-insensitive, and a plain number works as a condition
-too — zero is false, anything else is true.
+too: zero is false, anything else is true.
 
 ```
 not false                             | true
@@ -66,7 +66,7 @@ true xor true                         | false
 `not` binds looser than `xor`, so put it in brackets to use it as an `xor`
 operand: `true xor (not false)`.
 
-The integer `xor` is unchanged — with whole numbers it still works bit by bit:
+The integer `xor` is unchanged: with whole numbers it still works bit by bit:
 
 ```
 5 xor 3                               | 6
@@ -137,9 +137,9 @@ if checked then 23 kg else 8 kg                  | 8 kg
 
 ## When a condition has no answer
 
-If the condition itself can't be worked out — an empty `total`, or something
-like `0/0` — the line shows no answer at all, rather than quietly taking the
-false branch:
+If the condition itself can't be worked out, such as an empty `total` or
+something like `0/0`, the line shows no answer at all rather than quietly
+taking the false branch:
 
 ```
 total ? 1 : 2                                    |

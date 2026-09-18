@@ -58,7 +58,7 @@ Label with number 5: 10 + 1                    | 11
 
 The space after the colon is what makes it a label:
 
-- `14:45` is a time, not a label — there is no space after the colon.
+- `14:45` is a time, not a label: there is no space after the colon.
 - `Total:100` isn't a label either, so the line stays blank.
 - A ternary's colon is never read as a label: `shipping = express ? 15 : 5` still
   calculates (see [Conditionals](/syntax/conditionals/)).
@@ -76,7 +76,7 @@ ignored:
 (just a note)                                  |
 ```
 
-Brackets that *do* contain a calculation keep their usual meaning — they group
+Brackets that *do* contain a calculation keep their usual meaning: they group
 it, and a group written next to a value multiplies:
 
 ```
