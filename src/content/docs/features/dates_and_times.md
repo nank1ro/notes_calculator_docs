@@ -32,13 +32,13 @@ Notes Calculator accepts several date input formats.
 2026-12-25                             | 12/25/2026
 ```
 
-**Slash format** — US (`MM/DD/YYYY`) or EU (`DD/MM/YYYY`, enabled in Settings):
+**Slash format**: US (`MM/DD/YYYY`) or EU (`DD/MM/YYYY`, enabled in Settings):
 
 ```
 04/22/2026                             | 04/22/2026
 ```
 
-**Long-form** — month name, day, and optional year:
+**Long-form**: month name, day, and optional year:
 
 ```
 April 22 2026                          | 04/22/2026

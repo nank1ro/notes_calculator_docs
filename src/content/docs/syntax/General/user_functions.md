@@ -6,7 +6,7 @@ sidebar:
 ---
 
 Define a function once and reuse it on subsequent lines. Function bodies
-support the full expression syntax — operators, units, currencies,
+support the full expression syntax, including operators, units, currencies,
 constants, and built-in functions.
 
 ## Defining a function
@@ -39,7 +39,7 @@ vol(2, 3, 4)                           | 24
   underscores. No spaces, no leading digit.
 - At least one parameter is required. For zero-argument values, use a
   [variable](/features/variables/) instead (`pi_sq = pi * pi`).
-- Parameter names within a single definition must be distinct —
+- Parameter names within a single definition must be distinct.
   `f(x, x) = …` is rejected.
 
 ## Bodies can use the full expression language
@@ -59,7 +59,7 @@ withTax(100)                           | 110.00
 ```
 
 A numeric parameter can be wrapped in a currency or unit using either
-`in <unit>` or bare adjacency — useful when the function is meant to
+`in <unit>` or bare adjacency. This is useful when the function is meant to
 return a typed value:
 
 ```
@@ -105,12 +105,12 @@ A few intentional limits keep function calls fast and predictable:
   functions cannot call each other (mutual recursion). Recursive calls
   resolve to nothing rather than hanging.
 - **Bodies are isolated from line-scoped operations.** Inside a body,
-  `line1`, `previous`, and `total` do not see the surrounding document
-  — `previous` and `total` resolve to `0`, and `line<N>` resolves to
+  `line1`, `previous`, and `total` do not see the surrounding document.
+  In those calls, `previous` and `total` resolve to `0`, and `line<N>` resolves to
   `NaN`.
 - **Outer variables don't leak into bodies.** Only the function's own
   parameters are in scope; you cannot reference `y` inside a body
   unless `y` is one of the parameters.
 - **Built-in names always win.** Defining `sum(x) = x + 1` does not
-  override the built-in `sum(…)` — calls go to the built-in. Pick a
+  override the built-in `sum(…)`. Calls go to the built-in. Pick a
   different name to avoid the clash.

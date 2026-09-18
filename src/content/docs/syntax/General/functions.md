@@ -65,7 +65,7 @@ square root of 16 + 9       | 13
 cube root of 27 + 3         | 6
 ```
 
-Only the full phrase works — `sqrt of 16` isn't recognised, use `sqrt(16)`.
+Only the full phrase works. `sqrt of 16` isn't recognised, so use `sqrt(16)`.
 
 ## Multi-argument functions
 
@@ -101,7 +101,7 @@ stddev(2, 4, 4, 4, 5, 5, 7, 9) | 2.14
 ```
 
 `sum` and `avg` also exist as bare keywords that aggregate previous
-consecutive lines — see [Totals and Subtotals](/features/totals_and_subtotals/).
+consecutive lines. See [Totals and Subtotals](/features/totals_and_subtotals/).
 
 To define your own functions like `f(x) = 2*x + 1`, see
 [User-Defined Functions](/syntax/general/user_functions/).

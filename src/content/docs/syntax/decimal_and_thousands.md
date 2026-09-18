@@ -4,8 +4,8 @@ description: How Notes Calculator reads numbers written with a decimal point and
 ---
 
 Notes Calculator reads numbers written with thousands separators the same way it
-shows them, so you can type — or paste back — a grouped number like `1.234.567`
-and get its value.
+shows them, so you can type or paste a grouped number like `1.234.567` and get
+its value.
 
 Which character is the decimal point and which is the thousands separator is
 controlled by the **Use dot as decimal point** setting.
@@ -17,7 +17,7 @@ controlled by the **Use dot as decimal point** setting.
 | **Off** | `,` comma     | `.` dot             | `1.234.567,89` | 1234567.89 |
 | **On**  | `.` dot       | `,` comma           | `1,234,567.89` | 1234567.89 |
 
-With the setting off — comma is the decimal point, dot groups the thousands:
+With the setting off: comma is the decimal point, dot groups the thousands:
 
 ```
 1.234.567                              | 1.234.567
@@ -26,7 +26,7 @@ With the setting off — comma is the decimal point, dot groups the thousands:
 2 * 1.234.567                          | 2.469.134
 ```
 
-With **Use dot as decimal point** turned on — dot is the decimal point, comma
+With **Use dot as decimal point** turned on: dot is the decimal point, comma
 groups the thousands:
 
 ```
@@ -59,7 +59,7 @@ remembered for the account, so every device you use shows the same separator.
   `1.2.3` is not a valid grouped number and is simply ignored (the line stays
   blank).
 - A **single** group counts too. With the comma as the decimal point, `1.500` is
-  one thousand five hundred, not one and a half — write `1,5` for one and a
+  one thousand five hundred, not one and a half. Write `1,5` for one and a
   half. So `2.391 - 2.298` is `93`:
 
 ```
@@ -71,19 +71,19 @@ remembered for the account, so every device you use shows the same separator.
 
 | You type (comma as decimal point) | Read as                                      |
 | --------------------------------- | -------------------------------------------- |
-| `2.391`                           | 2391 — a well-formed three-digit group        |
-| `3.14`                            | 3.14 — the tail isn't three digits            |
-| `0.001`                           | 0.001 — a group never starts with a zero      |
-| `1.500e3`                         | 1500 — the exponent already scales the number |
-| `2,391`                           | 2.391 — comma is the decimal point            |
+| `2.391`                           | 2391: a well-formed three-digit group        |
+| `3.14`                            | 3.14: the tail isn't three digits            |
+| `0.001`                           | 0.001: a group never starts with a zero      |
+| `1.500e3`                         | 1500: the exponent already scales the number |
+| `2,391`                           | 2.391: comma is the decimal point            |
 
 The same holds mirrored when **Use dot as decimal point** is on: `2,391` is
 2391, `2.391` stays 2.391, `0,001` is 0.001, and `1,500e3` is 1500.
 
 ## Underscores for readability
 
-You can also group the digits of a **whole number** with underscores — the same
-trick many programming languages use. Underscores are purely visual, so they
+You can also group the digits of a **whole number** with underscores, just as
+many programming languages do. Underscores are purely visual, so they
 work the same way whatever your decimal-point setting is:
 
 ```
@@ -92,7 +92,7 @@ work the same way whatever your decimal-point setting is:
 2 * 1_000                              | 2.000
 ```
 
-An underscore has to sit **between two digits** — a leading, trailing, or
+An underscore has to sit **between two digits**: a leading, trailing, or
 doubled underscore (`_1000`, `1000_`, `1__000`) isn't a valid number, so the
 line just stays blank. Underscores group the whole-number part only; they aren't
 read inside the decimal part or an exponent.
@@ -100,7 +100,7 @@ read inside the decimal part or an exponent.
 ## Inside functions, commas separate arguments
 
 A comma is also how you separate function arguments, so a comma inside a function
-call is treated as an argument separator — not a thousands group:
+call is treated as an argument separator rather than a thousands group:
 
 ```
 sum(100, 200, 300)                     | 600
