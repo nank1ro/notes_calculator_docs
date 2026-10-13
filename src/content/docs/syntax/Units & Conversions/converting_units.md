@@ -38,9 +38,14 @@ $20 + 30                              | $50
 
 ## Adding & Subtracting Mixed Units
 
-When doing calculations with mixed unit types, the lowest common unit will be used.
+When adding or subtracting different units of the same kind, the larger unit wins, whichever order you type them in.
+Use `in <unit>` to choose a different unit.
 ```
-1km + 1.000m                          | 2.000 m
+1 km + 300 m                          | 1.3 km
+300 m + 1 km                          | 1.3 km
+500 ml + 1 L                          | 1.5 L
+1 lb + 8 oz                           | 1.5 lb
+1 km + 300 m in m                     | 1,300 m
 ```
 
 When units don't share a common base unit, the last used unit wins. The
