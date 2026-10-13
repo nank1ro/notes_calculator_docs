@@ -39,7 +39,8 @@ total                                          | 30
 ```
 
 Custom text is display only: calculations below keep using the real value.
-To remove it, open **Custom text** again and click **Clear**.
+To remove it, open the menu again, choose **Edit custom text**, and click
+**Clear** (the button only appears once a line has custom text).
 
 Custom text and decimal places are saved with the note, sync to your other
 devices, and appear in every export format.
