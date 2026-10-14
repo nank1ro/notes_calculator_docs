@@ -29,6 +29,11 @@ Calculations are performed automatically as you type, and the result is updated 
 
 ## What's new
 
+- [Words and Numbers](/features/words_and_numbers/): lines like `100 groceries` or `3 kg apples` now show a result.
+- [Durations](/features/dates_and_times/#durations): `2 weeks + 1 day` shows 2 weeks 1 day, and date differences show years, months, weeks and days.
+- [Mixed units](/syntax/units--conversions/converting_units/): feet and inches, pounds and ounces, and mixed currencies follow simple rules.
+- [Decimal Point & Thousands Separators](/syntax/decimal_and_thousands/): separators are now strict. With the comma as the decimal point, a dot is always a thousands separator, so `1.5` is 15 (write `1,5`). The same applies the other way round.
+- [Volume Units Setting](/syntax/units--conversions/volume_units/): choose US Customary, Imperial or Metric gallons, pints and cups.
 - [Decimal Point & Thousands Separators](/syntax/decimal_and_thousands/): type grouped numbers like `1.234.567` (matching your "Use dot as decimal point" setting) or `1_000_000` with underscores.
 - [Line References](/features/line_references/): refer to an earlier line by its number, e.g. `line1`.
 - [User-Defined Functions](/syntax/general/user_functions/): define your own functions like `f(x) = 2*x + 1`.

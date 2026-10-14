@@ -59,8 +59,17 @@ not false                             | true
 not true and false                    | false
 true xor false                        | true
 true xor true                         | false
-5 and 3                               | true
-5 and 0                               | false
+not 0                                 | true
+5 > 3 and 1                           | true
+```
+
+`and` and `or` give `true` or `false` only when there is a comparison or a
+`true`/`false` value on the line. Between two plain amounts they show nothing,
+because in a note `5 and 3` is usually just words:
+
+```
+5 and 3                               |
+$5 coffee and $3 tea                  |
 ```
 
 `not` binds looser than `xor`, so put it in brackets to use it as an `xor`

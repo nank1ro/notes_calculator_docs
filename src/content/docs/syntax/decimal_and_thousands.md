@@ -54,31 +54,27 @@ remembered for the account, so every device you use shows the same separator.
 
 ## Rules
 
-- Thousands groups are **three digits** each (the leading group may be 1–3). A
-  well-formed number like `1.234.567` is read as `1234567`; a malformed one like
-  `1.2.3` is not a valid grouped number and is simply ignored (the line stays
-  blank).
-- A **single** group counts too. With the comma as the decimal point, `1.500` is
-  one thousand five hundred, not one and a half. Write `1,5` for one and a
-  half. So `2.391 - 2.298` is `93`:
+The setting is strict: only your decimal point can start a decimal part. The
+other separator is always read as a thousands separator, so it is skipped
+when reading the number, wherever it sits. With the comma as the decimal point:
+
+| You type  | Shows    | Value                   |
+| --------- | -------- | ----------------------- |
+| `1.234`   | 1.234    | one thousand two hundred thirty-four |
+| `1.234,5` | 1.234,50 | one thousand two hundred thirty-four and a half |
+| `1,5`     | 1,50     | one and a half          |
+| `1.5`     | 15       | fifteen: the dot is skipped |
+| `3.14`    | 314      | three hundred fourteen  |
+| `0.001`   | 1        | one                     |
 
 ```
-2.391 - 2.298                          | 93
 1.234 + 1                              | 1.235
+2.391 - 2.298                          | 93
+3.14                                   | 314
 ```
 
-- Only a genuine group is grouped. Everything else stays a decimal:
-
-| You type (comma as decimal point) | Read as                                      |
-| --------------------------------- | -------------------------------------------- |
-| `2.391`                           | 2391: a well-formed three-digit group        |
-| `3.14`                            | 3.14: the tail isn't three digits            |
-| `0.001`                           | 0.001: a group never starts with a zero      |
-| `1.500e3`                         | 1500: the exponent already scales the number |
-| `2,391`                           | 2.391: comma is the decimal point            |
-
-The same holds mirrored when **Use dot as decimal point** is on: `2,391` is
-2391, `2.391` stays 2.391, `0,001` is 0.001, and `1,500e3` is 1500.
+With **Use dot as decimal point** on, it works the other way round: `1,000`
+is one thousand, `1.5` is one and a half, and `1,5` is fifteen.
 
 ## Underscores for readability
 

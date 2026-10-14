@@ -32,10 +32,14 @@ Notes Calculator accepts several date input formats.
 2026-12-25                             | 12/25/2026
 ```
 
-**Slash format**: US (`MM/DD/YYYY`) or EU (`DD/MM/YYYY`, enabled in Settings):
+**Slash format**: US (`MM/DD/YYYY`) or European (`DD/MM/YYYY`), chosen by the
+date format setting. With the US order, a date whose first number is over 12
+is read day first, so `22/04/2026` still works. Two-digit years work too.
 
 ```
 04/22/2026                             | 04/22/2026
+22/04/2026                             | 04/22/2026
+22/04/26                               | 04/22/2026
 ```
 
 **Long-form**: month name, day, and optional year:
@@ -67,11 +71,21 @@ today + 2 weeks                        | 05/06/2026
 today - 1                              | 04/21/2026
 ```
 
-Subtract two dates to get a duration:
+Subtract two dates to get the time between them, in years, months, weeks and
+days. The result has a minus sign when the first date is the earlier one:
 
 ```
-2026-12-25 - today                     | 247 days
+2026-12-25 - today                     | 8 months 3 days
+Dec 25 2026 - Oct 14 2026              | 2 months 1 week 4 days
 next Monday - today                    | 5 days
+2026-01-01 - 2026-03-01                | -2 months
+```
+
+Adding months to a date moves it by calendar months. When the day doesn't
+exist in the new month, you get that month's last day:
+
+```
+2026-01-31 + 1 month                   | 02/28/2026
 ```
 
 Add a time amount to a date:
@@ -123,16 +137,57 @@ time difference between Tokyo and New York   | 13 hours
 difference between GMT+8 and EST             | 13 hours
 ```
 
-## Duration Formatting
+## Durations
 
-A duration result is displayed in human-readable form.
+A single duration stays in the unit you wrote, and durations in one unit add
+up in that unit:
 
 ```
-2026-12-25 - today                     | 247 days
-tomorrow - now                         | 12 hours
+90 min                                 | 90 minutes
+25 hours                               | 25 hours
+1.5 hours + 1 hour                     | 2.50 hours
+```
+
+Adding durations in different units shows a breakdown. Writing them side by
+side works the same way:
+
+```
+2 weeks + 1 day                        | 2 weeks 1 day
+1 h + 30 min                           | 1 hour 30 min
+2 weeks 3 days                         | 2 weeks 3 days
+```
+
+Subtracting starts the breakdown at the first unit, and dividing splits a
+duration into parts:
+
+```
+2 weeks - 1 day                        | 1 week 6 days
+200 s - 1 min                          | 140 seconds
+100 hours / 3                          | 33 hours 20 min
+```
+
+Use `in <unit>` for a single unit, or a pair of neighbouring units such as
+`in hours and minutes` or `in weeks and days` for a breakdown:
+
+```
+1 hour + 1 day in hours                | 25 hours
+100 min in hours and minutes           | 1 hour 40 min
+10 days in weeks and days              | 1 week 3 days
 ```
 
 Hover over any duration result to see the raw value in seconds.
+
+### Months and years
+
+A year is the length of the current calendar year: 365 days, or 366 in a leap
+year. A month you type as a duration, like `12 months`, is a twelfth of that
+year. Dates use calendar months instead (see
+[Date Arithmetic](#date-arithmetic)).
+
+```
+1 year in days                         | 365 days
+12 months in years                     | 1 year
+```
 
 ## ISO 8601 & Unix Timestamps
 
