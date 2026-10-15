@@ -44,3 +44,9 @@ To remove it, open the menu again, choose **Edit custom text**, and click
 
 Custom text and decimal places are saved with the note, sync to your other
 devices, and appear in every export format.
+
+Opening the menu, or clicking a result, takes the cursor out of the line you
+were editing.
+
+In a [read-only shared note](/features/sharing/#shared-notes-on-the-free-plan),
+the menu only has **Copy result**.
