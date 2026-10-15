@@ -10,6 +10,37 @@ import { Tabs, TabItem } from '@astrojs/starlight/components';
 You can also write any currency by its three-letter code, like `5 USD` or
 `20 EUR`, and currency names also work in the plural, like `5 euros`.
 
+## Cents and other sub-units
+
+Cents, pence, sats and the other sub-units below are money too, so you can mix
+them with whole currencies. As with any
+[currencies](/syntax/units--conversions/converting_units/#currencies), adding
+answers in the last unit and subtracting keeps the first. From 1 cent up,
+results are rounded to whole cents (`5.5 cents` shows 6 cents); below 1 cent
+they keep their decimals (`0.4 cents`).
+
+```
+5 cents + $1                          | $1.05
+$1 + 5 cents                          | 105 cents
+5 EUR in euro cents                   | 500 euro cents
+20 pence + 1 GBP                      | £1.20
+$1 - 5 cents                          | $0.95
+5.5 cents                             | 6 cents
+0.4 cents                             | 0.40 cents
+1 BTC in sats                         | 100,000,000 sats
+```
+
+| Symbol | Name | Definition |
+| :--- | :--- | :--- |
+| `cent` or `cents` | Cent | A hundredth of a US dollar. |
+| `euro cent` or `euro cents` | Euro cent | A hundredth of a euro. |
+| `pence` or `penny` or `pennies` | Penny | A hundredth of a pound sterling. |
+| `sats` or `satoshi` or `satoshis` | Satoshi | A hundred-millionth of a bitcoin. |
+| `gwei` | Gwei | A billionth of an ether. |
+| `wei` | Wei | A quintillionth (10^-18) of an ether. |
+
+## Currencies
+
 | Symbol | Name | Definition |
 | :--- | :--- | :--- |
 | `€` or `Euro` or `euros` or `Euri` or `Ευρώ` or `Евро` or `Evro` | Euro | The official currency of the Eurozone, a monetary union of 20 of the 27 European Union member states. |

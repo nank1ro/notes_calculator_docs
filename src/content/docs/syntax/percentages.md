@@ -3,6 +3,13 @@ title: Percentages
 description: Learn how to use percentages in Notes Calculator.
 ---
 
+You can write `percent` or `percentage` instead of `%`:
+
+```
+200 + 10 percent                | 220
+10 percentage of 200            | 20
+```
+
 ## Getting a percentage of a number
 ```
 10% of 200                      | 20

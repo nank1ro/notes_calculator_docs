@@ -177,6 +177,11 @@ Use `in <unit>` for a single unit, or a pair of neighbouring units such as
 
 Hover over any duration result to see the raw value in seconds.
 
+Business days and work hours (`5 weekdays`, `5 business days`, `8 work
+hours`) are recognised but not supported yet: counting them needs your
+country's public holidays, so for now these lines show nothing instead of a
+wrong number of days.
+
 ### Months and years
 
 A year is the length of the current calendar year: 365 days, or 366 in a leap

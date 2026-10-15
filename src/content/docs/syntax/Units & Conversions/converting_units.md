@@ -98,4 +98,35 @@ An implicit rate will be made when a supported unit cannot be created through mu
 $30 × 4 days                          | $120
 ```
 
+## Combining Different Kinds of Units
+
+Multiplying or dividing two different kinds of units gives the unit you'd
+expect, when the line is just that one step:
+
+```
+5 V * 2 amps                          | 10 W
+2 kW * 3 h                            | 6 kWh
+6 kWh / 3 kW                          | 2 hours
+10 N * 2 m                            | 20 N⋅m
+1 GB / 100 Mbps                       | 80 seconds
+12 V * 2 Ah in Wh                     | 24 Wh
+```
+
+In a longer calculation such a step shows nothing. Put it in a
+[variable](/features/variables/) first:
+
+```
+5 V * 2 amps * 3 h                    |
+p = 5 V * 2 amps                      | 10 W
+p * 3 h                               | 30 Wh
+```
+
+Related kinds also convert into each other:
+
+```
+1 Hz in rpm                           | 60 rpm
+10 Nm in J                            | 10 J
+2 Ω in siemens                        | 0.50 siemens
+```
+
 

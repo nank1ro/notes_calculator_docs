@@ -65,4 +65,6 @@ A line shows nothing when:
 
 - it has no numbers at all, like `meeting notes about the offsite`;
 - its meaning isn't clear, like `$5 coffee and $3 tea` or `5 and 3`. Write
-  `$5 coffee + $3 tea` to add them up.
+  `$5 coffee + $3 tea` to add them up;
+- it uses business days or work hours, like `5 weekdays`, which aren't
+  supported yet (see [Durations](/features/dates_and_times/#durations)).

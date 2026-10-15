@@ -12,6 +12,12 @@ Area and volume units also work with a plain or `^` power, such as `m2`,
 [Volume Units Setting](/syntax/units--conversions/volume_units/).
 
 <Tabs>
+  <TabItem label="Acceleration">
+    | Symbol | Name | Definition |
+    | :--- | :--- | :--- |
+    | `m/s²` or `m/s^2` or `meters per second squared` | Meters per Second Squared | The SI unit of acceleration. |
+    | `ft/s²` or `ft/s^2` or `feet per second squared` | Feet per Second Squared | Exactly 0.3048 m/s². |
+  </TabItem>
   <TabItem label="Angles">
     | Symbol | Name        | Definition                                    |
     | -------- | ----------- | -------------------------------------------- |
@@ -37,6 +43,23 @@ Area and volume units also work with a plain or `^` power, such as `m2`,
     | `mi²` or `square mile` or `square miles` or `sq mi` | Square Mile | A unit of area in the imperial and US customary systems, equal to the area of a square with sides one mile long, often used for very large land areas. |
     | `ac` or `acre` or `acres` | Acre | A unit of land area, typically used in the imperial and US customary systems, historically defined as the area a pair of oxen could plow in a day. |
     | `area` or `areas` | Are | A metric unit of area, equal to 100 square meters (10 meters by 10 meters), less commonly used than the hectare. |
+  </TabItem>
+  <TabItem label="Chemistry">
+    | Symbol | Name | Definition |
+    | :--- | :--- | :--- |
+    | `mol` or `mole` or `moles` | Mole | The SI unit of amount of substance. |
+    | `mmol`, `µmol`, `nmol` | Millimole, Micromole, Nanomole | Thousandths, millionths and billionths of a mole. |
+    | `molar` | Molar | A concentration of one mole per liter. |
+  </TabItem>
+  <TabItem label="Data Rates">
+    | Symbol | Name | Definition |
+    | :--- | :--- | :--- |
+    | `bps` or `bits per second` | Bits per Second | One bit each second. |
+    | `kbps`, `Mbps`, `Gbps`, `Tbps` | Kilobits to Terabits per Second | Network speeds, in thousands, millions, billions and trillions of bits per second. |
+    | `Bps` or `bytes per second` | Bytes per Second | One byte (8 bits) each second. |
+    | `kBps`, `MBps`, `GBps`, `TBps` | Kilobytes to Terabytes per Second | Transfer speeds in bytes per second. |
+    | `KiBps`, `MiBps`, `GiBps` | Kibibytes to Gibibytes per Second | Binary multiples: 1,024, 1,024² and 1,024³ bytes per second. |
+    | `B/s`, `kB/s`, `MB/s`, `GB/s`, `kbit/s`, `Mbit/s`, `Mb/s` | Slash forms | The same rates written with a slash. Results keep the form you typed. |
   </TabItem>
   <TabItem label="Digital Data">
     | Symbol | Name | Definition |
@@ -70,6 +93,18 @@ Area and volume units also work with a plain or `^` power, such as `m2`,
     | `PiB` or `pebibyte` or `pebibytes` | Pebibyte | A unit of digital information equal to 1,125,899,906,842,624 bytes (2^50 bytes). |
     | `EiB` or `exbibyte` or `exbibytes` | Exbibyte | A unit of digital information equal to 1,152,921,504,606,846,976 bytes (2^60 bytes). |
   </TabItem>
+  <TabItem label="Electricity">
+    | Symbol | Name | Definition |
+    | :--- | :--- | :--- |
+    | `V` or `volt` or `volts` | Volt | The SI unit of voltage. Also `mV`, `µV`, `KV` and `MV`. Write kilovolts with a capital K: lowercase `kV` isn't recognised. |
+    | `amp` or `amps` or `ampere` or `amperes` | Ampere | The SI unit of electric current. Also milliamps, microamps, kiloamps and megaamps. |
+    | `Ω` or `ohm` or `ohms` | Ohm | The SI unit of resistance. Also `mΩ`, `µΩ`, `kΩ` and `MΩ`. |
+    | `℧` or `siemens` | Siemens | The SI unit of conductance, the inverse of an ohm. Also millisiemens, microsiemens, kilosiemens and megasiemens. |
+    | `coulomb` or `coulombs` | Coulomb | The SI unit of electric charge. |
+    | `Ah` or `amp hour` or `amp hours` | Amp Hour | A charge of one amp for one hour, 3,600 coulombs. Also `mAh`, `µAh`, `kAh` and `MAh`. |
+    | `farad` or `farads` | Farad | The SI unit of capacitance. Also millifarads, microfarads, kilofarads and megafarads. |
+    | `henry` or `henrys` | Henry | The SI unit of inductance. Also millihenrys, microhenrys, kilohenrys and megahenrys. |
+  </TabItem>
   <TabItem label="Energy">
     | Symbol | Name | Definition |
     | :--- | :--- | :--- |
@@ -85,7 +120,7 @@ Area and volume units also work with a plain or `^` power, such as `m2`,
     | `GWh` or `gigawatt hour` or `gigawatt hours` | Gigawatt Hour | 1,000 megawatt hours. |
     | `TWh` or `terawatt hour` or `terawatt hours` | Terawatt Hour | 1,000 gigawatt hours. |
     | `eV` or `electron volt` or `electron volts` | Electron Volt | The energy an electron gains across one volt, about 1.602 x 10^-19 joules. |
-    | `ft⋅lbf` or `foot pound force` | Foot-pound | The energy of one pound-force acting over one foot, about 1.356 joules. |
+    | `ft⋅lb` or `energy foot pound` | Foot-pound | The energy of one pound-force acting over one foot, about 1.356 joules. For torque, see the Torque tab. |
   </TabItem>
   <TabItem label="Forces">
     | Symbol | Name | Definition |
@@ -99,10 +134,21 @@ Area and volume units also work with a plain or `^` power, such as `m2`,
     | `kgf` or `kilogram force` | Kilogram-force | A unit of force equal to the magnitude of the force exerted by gravity on one kilogram of mass (approximately 9.80665 newtons). |
     | `pdl` | Poundal | A unit of force in the foot-pound-second (FPS) system, defined as the force required to accelerate a mass of one pound at a rate of one foot per second squared. |
   </TabItem>
+  <TabItem label="Frequency">
+    | Symbol | Name | Definition |
+    | :--- | :--- | :--- |
+    | `Hz` or `hertz` | Hertz | One cycle per second. Also `nHz`, `µHz`, `mHz`, `kHz`, `MHz`, `GHz` and `THz`. |
+    | `rpm` or `revolutions per minute` | Revolutions per Minute | One turn each minute: `1 Hz` is 60 rpm. |
+    | `rps` or `revolutions per second` | Revolutions per Second | One turn each second. |
+    | `rad/s` or `radians per second` | Radians per Second | The SI unit of angular velocity. |
+    | `fps` | Frames per Second | A frame rate for video and games. |
+    | `frame` or `frames` | Frames | A count of frames. |
+  </TabItem>
   <TabItem label="Fuels">
     | Symbol | Name | Definition |
     | :--- | :--- | :--- |
     | `km/l` or `kilometers per liter` | Kilometers per Liter | A measure of fuel efficiency, indicating the distance in kilometers traveled per liter of fuel consumed. |
+    | `L/km` or `liters per kilometer` | Liters per Kilometer | Fuel used per kilometer. |
     | `l/100km` or `liters per 100 km` | Liters per 100 km | A measure of fuel consumption, indicating the volume of fuel in liters consumed to travel 100 kilometers. |
     | `mpg` | Miles per Gallon | Miles per US or imperial gallon, following the [Volume Units Setting](/syntax/units--conversions/volume_units/). |
     | `mpg US` or `US mpg` or `miles per US gallon` | Miles per US Gallon | A measure of fuel efficiency, indicating the distance in miles traveled per US gallon of fuel consumed. |
@@ -132,6 +178,12 @@ Area and volume units also work with a plain or `^` power, such as `m2`,
     | `mil` or `thou` or `mils` | Mils | A unit of length equal to one thousandth of an inch, often used for measuring thickness. |
     | `ftm` or `fathom` or `fathoms` | Fathoms | A unit of length used for water depth, equal to 6 feet. |
     | `fur` or `furlong` or `furlongs` | Furlongs | A unit of length equal to 220 yards, or one eighth of a mile. |
+  </TabItem>
+  <TabItem label="Magnetism">
+    | Symbol | Name | Definition |
+    | :--- | :--- | :--- |
+    | `tesla` or `teslas` | Tesla | The SI unit of magnetic flux density. Also milliteslas, microteslas, kiloteslas and megateslas. |
+    | `Wb` or `weber` or `webers` | Weber | The SI unit of magnetic flux. Also `mWb`, `µWb`, `kWb` and `MWb`. |
   </TabItem>
   <TabItem label="Masses">
     | Symbol | Name | Definition |
@@ -246,6 +298,23 @@ Area and volume units also work with a plain or `^` power, such as `m2`,
     | `mo` or `month` or `months` | Month | A twelfth of a year. |
     | `a` or `y` or `yr` or `year` or `years` | Year | The length of the current calendar year: 365 days, or 366 in a leap year. |
     | `c.` or `century` or `centuries` | Century | A unit of time equal to 100 years. |
+  </TabItem>
+  <TabItem label="Torque">
+    | Symbol | Name | Definition |
+    | :--- | :--- | :--- |
+    | `Nm` or `N⋅m` or `newton meter` or `newton meters` | Newton Meter | The SI unit of torque. |
+    | `ft-lb` or `lbf⋅ft` or `ft⋅lbf` or `pound feet` or `foot pounds` | Pound-foot | About 1.356 newton meters. Add `in J` for the energy. |
+    | `in-lbf` or `lbf⋅in` or `inch pounds` | Pound-inch | A twelfth of a pound-foot. |
+    | `ozf⋅in` or `in-ozf` | Ounce-inch | A sixteenth of a pound-inch. |
+  </TabItem>
+  <TabItem label="Typography">
+    | Symbol | Name | Definition |
+    | :--- | :--- | :--- |
+    | `px` or `pixel` or `pixels` | Pixels | A screen pixel. |
+    | `em` | Em | A font-relative size, taken as 16 px. |
+    | `rem` | Rem | A root-font-relative size, taken as 16 px. |
+    | `pts` or `PostScript points` | Points | A PostScript point, 1/72 of an inch. |
+    | `ppi` or `dpi` or `pixels per inch` | Pixels per Inch | Screen or print resolution. |
   </TabItem>
   <TabItem label="Volumes">
     | Symbol | Name | Definition |
