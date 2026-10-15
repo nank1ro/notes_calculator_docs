@@ -35,6 +35,15 @@ Calculations are performed automatically as you type, and the result is updated 
 - [Decimal Point & Thousands Separators](/syntax/decimal_and_thousands/): separators are now strict. With the comma as the decimal point, a dot is always a thousands separator, so `1.5` is 15 (write `1,5`). The same applies the other way round.
 - [Unit Reference](/syntax/units--conversions/unit_reference/): new units for electricity, frequency, data rates, torque, typography and more, and `5 V * 2 amps` shows 10 W.
 - [Volume Units Setting](/syntax/units--conversions/volume_units/): choose US Customary, Imperial or Metric gallons, pints and cups.
+- [Line Ranges](/features/line_references/#line-ranges): add up a block of lines with `line2...line6` (or `2...6`), or use it in `avg(...)`, `max(...)` and friends.
+- [Sharing a Note as a Link](/features/sharing/): share a note as a link that opens in the web app, custom result text included.
+- [Notes and Tabs](/features/notes_and_tabs/): on phones, long-press a tab for its menu. Note lists show when each note was created and last updated, most recently updated first.
+- [Percentages](/syntax/percentages/): `as %` turns any result into a percentage, and `20% of 50 USD` shows $10.
+- [Conditionals](/syntax/conditionals/): comparisons work across units, so `1 km > 900 m` is true.
+- [Functions](/syntax/general/functions/): `sin(30°)` uses degrees.
+- [Settings](/features/settings/): changing a setting updates your open notes right away.
+- [Headings](/features/headings_and_comments/#headings): pasting text with Markdown headings like `# Title` makes headings.
+- [Answer Menu](/features/answer_menu/): copy a result, choose its decimal places, or replace it with your own text.
 - [Decimal Point & Thousands Separators](/syntax/decimal_and_thousands/): type grouped numbers like `1.234.567` (matching your "Use dot as decimal point" setting) or `1_000_000` with underscores.
 - [Line References](/features/line_references/): refer to an earlier line by its number, e.g. `line1`.
 - [User-Defined Functions](/syntax/general/user_functions/): define your own functions like `f(x) = 2*x + 1`.
@@ -44,7 +53,7 @@ Calculations are performed automatically as you type, and the result is updated 
 As you type, Notes Calculator suggests units, currencies, constants,
 functions, line references, and timezones. Press **Tab** to accept,
 **↑/↓** to navigate, and **Esc** to dismiss. Toggle in
-**Settings → Completion hints**.
+**Settings → Completion help**.
 :::
 
 :::tip[Syntax highlighting]
