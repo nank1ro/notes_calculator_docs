@@ -13,9 +13,9 @@ sidebar:
 | `round()` | Round   | Returns the nearest integer (half-away-from-zero). Also accepts a second arg for decimal places. |
 | `ceil()`  | Ceiling | Rounds up to the nearest integer |
 | `floor()` | Floor   | Rounds down to the nearest integer |
-| `sin()`   | Sine      | Returns the sine of an angle (in radians)   |
-| `cos()`   | Cosine    | Returns the cosine of an angle (in radians) |
-| `tan()`   | Tangent   | Returns the tangent of an angle (in radians) |
+| `sin()`   | Sine      | Returns the sine of an angle (in radians, or degrees with `°`) |
+| `cos()`   | Cosine    | Returns the cosine of an angle (in radians, or degrees with `°`) |
+| `tan()`   | Tangent   | Returns the tangent of an angle (in radians, or degrees with `°`) |
 | `ln()`   | Natural Logarithm | The natural logarithm of a number is its logarithm to the base of the mathematical constant `e`. |
 | `log2` | Logarithm Base 2 | Returns the logarithm of a number to the base 2 |
 | `log10` | Logarithm Base 10 | Returns the logarithm of a number to the base 10 |
@@ -41,6 +41,16 @@ round(1.5)                  | 2
 ceil(1.1)                   | 2
 floor(1.9)                  | 1
 round(3.14159, 2)           | 3.14
+```
+
+Trigonometry works in radians. Write `°` or `degrees` after the angle to use
+degrees instead:
+
+```
+sin(pi/6)                   | 0.50
+sin(30°)                    | 0.50
+cos(60 degrees)             | 0.50
+tan(45°)                    | 1.00
 ```
 
 See the [Rounding](/syntax/rounding/) page for natural-language rounding syntax and more examples.
@@ -99,6 +109,10 @@ avg(1, 2, 3, 4)             | 2.50
 median(1, 2, 3, 4, 5)       | 3
 stddev(2, 4, 4, 4, 5, 5, 7, 9) | 2.14
 ```
+
+`sum`, `avg`, `min`, `max`, `median` and `stddev` also take a
+[line range](/features/line_references/#line-ranges), such as
+`avg(line1...line6)` or `max(1...6, 10)`, as a list of values.
 
 `sum` and `avg` also exist as bare keywords that aggregate previous
 consecutive lines. See [Totals and Subtotals](/features/totals_and_subtotals/).

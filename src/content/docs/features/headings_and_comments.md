@@ -18,6 +18,12 @@ Use the `#` character to indicate a heading line. Heading lines are emboldened a
 ###### Heading 6                     | 
 ```
 
+Typing `# ` at the start of a line turns it into a heading. Pasting works the
+same way: when you paste text with Markdown headings, from `# Title` to
+`###### Section`, those lines become headings. The `#` needs a space after
+it, so `#tag` stays text. A pasted heading line inside a list, quote or code
+block stays text too.
+
 ## Comments
 
 If you want to add a comment to your notes, use the `//` characters. Comments are not evaluated and do not display an answer.

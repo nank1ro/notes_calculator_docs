@@ -73,8 +73,22 @@ parentheses can be used to format an arithmetic result:
 (0b1010 + 5) in binary                 | 1111
 ```
 
-`in hex`, `in binary`, and `in octal` require an integer value.
-Non-integers produce an error.
+`in hex`, `in binary`, and `in octal` require an integer value: with a
+non-integer the line shows nothing.
+
+## Converting between number systems
+
+A number can also carry its base as a unit, written as a subscript (`₂`,
+`₈`, `₁₀`, `₁₆`) or a name such as `binary` or `decimal` (see the
+[Unit Reference](/syntax/units--conversions/unit_reference/)). Convert it with
+`in`:
+
+```
+11₂ in ₁₀                              | 3
+255₁₀ in ₁₆                            | FF
+11 binary in decimal                   | 3
+255 decimal in hex                     | FF
+```
 
 ## Global default format
 
@@ -89,3 +103,13 @@ format**:
 
 A per-line `as scientific` / `as fixed` postfix always overrides the
 global setting.
+
+Very small numbers keep their significant digits instead of rounding down to
+`0.00`:
+
+```
+0.0001                                 | 0.0001
+1/3000                                 | 0.00033
+0.000012345                            | 1.23e-5
+1 µg in mg                             | 0.001 mg
+```

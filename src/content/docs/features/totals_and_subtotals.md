@@ -38,6 +38,31 @@ total                            | 6
 
 In the example above, the first `total` command sums the numbers `1`, `2`, and `3`, while the second `total` command sums only the numbers `4` and `2`, because it stops at the first empty line, making it to act like a subtotal.
 
+Earlier total lines don't count again, so a `total` below a subtotal adds up
+the numbers, not the subtotal:
+
+```
+1                                | 1
+2                                | 2
+3                                | 3
+total                            | 6
+5                                | 5
+total                            | 11
+average                          | 2.75
+```
+
+Totals of durations keep the breakdown:
+
+```
+1 hour                           | 1 hour
+30 min                           | 30 minutes
+45 min                           | 45 minutes
+total                            | 2 hours 15 min
+```
+
+To add up a block of lines that spans empty lines or headings, use a
+[line range](/features/line_references/#line-ranges) like `line2...line6`.
+
 ## Average
 
 ```
