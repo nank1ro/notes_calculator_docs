@@ -34,6 +34,16 @@ For example:
 2 <= 2                                | true
 ```
 
+Amounts in different units are compared by their real size, and the math on
+each side is worked out first:
+
+```
+1 km > 900 m                          | true
+1 kg == 1000 g                        | true
+2 hours < 90 min                      | false
+5 > 3 + 4                             | false
+```
+
 ## Logical Operators
 Logical operators are used to combine multiple conditions. The result is `true` if the combined condition
 

@@ -29,3 +29,13 @@ amount x 2                             | €100
 amount = 20€                           | €20         
 amount x 2                             | €40 
 ```
+
+## Variables named like units
+
+A variable can have the same name as a unit, like `l` (liters). On the lines
+below it, the name means your variable:
+
+```
+l = 2                                  | 2
+l * 3                                  | 6
+```

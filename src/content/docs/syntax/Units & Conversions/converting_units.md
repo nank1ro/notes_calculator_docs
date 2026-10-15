@@ -87,15 +87,34 @@ write `in ft` or use a fraction:
 
 ## Multiplying Units
 
-When multiplying units, the result will be a supported math compound unit:
+Multiplying lengths gives an area or a volume, and powers of a length work
+too:
 
 ```
 10m x 10m                             | 100 m²
+2 m * 30 cm                           | 0.60 m²
+(4 m)^2                               | 16 m²
+(2 km)^3                              | 8 km³
 ```
+
+Multiplying two amounts of another kind, such as `2 kg * 3 kg`, shows nothing.
 
 An implicit rate will be made when a supported unit cannot be created through multiplication:
 ```
 $30 × 4 days                          | $120
+```
+
+## Dividing Units
+
+Dividing two amounts of the same kind gives a plain number, and dividing a
+distance by a time gives a speed. Multiply a speed by a time to get a
+distance:
+
+```
+6 kg / 2 kg                           | 3
+1200 EUR / 400 EUR                    | 3
+100 km / 2 h                          | 50 km/h
+50 km/h * 3 h                         | 150 km
 ```
 
 ## Combining Different Kinds of Units

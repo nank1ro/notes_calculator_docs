@@ -14,6 +14,14 @@ You can write `percent` or `percentage` instead of `%`:
 ```
 10% of 200                      | 20
 200 x 25%                       | 50
+20% of 50 USD                   | $10
+```
+
+They work with variables too:
+
+```
+price = 80                      | 80
+20% of price                    | 16
 ```
 
 ## Adding a percentage to a number
@@ -48,6 +56,16 @@ You can write `percent` or `percentage` instead of `%`:
 
 20/200 as %                     | 10%
 20/200%                         | 10%
+20 is % of 80                   | 25%
+```
+
+`as %` turns any result into a percentage, including one worked out from
+variables:
+
+```
+done = 30                       | 30
+planned = 40                    | 40
+done / planned as %             | 75%
 ```
 
 ## Operations with percentages

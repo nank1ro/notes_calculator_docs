@@ -173,6 +173,7 @@ Use `in <unit>` for a single unit, or a pair of neighbouring units such as
 1 hour + 1 day in hours                | 25 hours
 100 min in hours and minutes           | 1 hour 40 min
 10 days in weeks and days              | 1 week 3 days
+1 h 2 min 3 s in s                     | 3,723 seconds
 ```
 
 Hover over any duration result to see the raw value in seconds.
