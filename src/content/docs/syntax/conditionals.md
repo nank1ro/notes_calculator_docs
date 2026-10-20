@@ -74,12 +74,13 @@ not 0                                 | true
 ```
 
 `and` and `or` give `true` or `false` only when there is a comparison or a
-`true`/`false` value on the line. Between two plain amounts they show nothing,
-because in a note `5 and 3` is usually just words:
+`true`/`false` value on the line. Between amounts they are just words, so the
+amounts [add up](/features/words_and_numbers/#several-numbers-on-one-line), and
+plain numbers show the last one:
 
 ```
-5 and 3                               |
-$5 coffee and $3 tea                  |
+$5 coffee and $3 tea                  | $8
+5 and 3                               | 3
 ```
 
 `not` binds looser than `xor`, so put it in brackets to use it as an `xor`
