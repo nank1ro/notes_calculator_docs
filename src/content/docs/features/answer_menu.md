@@ -10,9 +10,9 @@ Every line has an answer menu.
 - **Desktop:** hover over the answer and click the small **⋯** button next to it.
 - **Mobile:** long-press the answer, or the empty space where it would be.
 
-## Copy answer
+## Copy result
 
-Copies the answer exactly as it's shown.
+Copies the result exactly as it's shown.
 
 ## Decimal places
 
