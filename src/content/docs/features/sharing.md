@@ -1,12 +1,13 @@
 ---
 title: Sharing a Note as a Link
-description: Share a note as a link that opens in the Notes Calculator web app, custom result text included.
+description: Share a note as a link that opens in the Notes Calculator web app, custom result text and your settings included.
 sidebar:
   order: 9
 ---
 
 Share any note as a link. Whoever opens the link sees the note in the Notes
-Calculator web app, with its custom result text and decimal places.
+Calculator web app with the same results you see: its custom result text and
+decimal places, worked out with your settings.
 
 ## Creating a link
 
@@ -25,8 +26,9 @@ menu's **Export**).
 ## What the link contains
 
 The note travels inside the link itself: its title, its text, and any
-[custom result text and decimal places](/features/answer_menu/) you set. It
-isn't stored on a server. The link is a copy of the note as it was when you
+[custom result text and decimal places](/features/answer_menu/) you set,
+and your [settings](/features/settings/) for it (see below). It isn't stored
+on a server. The link is a copy of the note as it was when you
 shared it, so later edits don't change it: share again to send the new
 version.
 
@@ -42,6 +44,31 @@ The link opens the note in the web app.
 
 If a link is broken or incomplete, you see "This shared note couldn't be
 opened." instead.
+
+### The sender's settings
+
+A shared note opens with the settings of the person who shared it: decimal
+point, date format, volume units, result decimals, number format, compact
+result and result alignment. A note written as `1,5 + 1` by someone who uses
+the comma as the decimal point shows 2,5 for you too, even if you use the dot.
+
+Your own settings don't change, and your other notes keep using them. If the
+sender's settings are the same as yours, the note opens as an ordinary note.
+
+A note that uses the sender's settings has a banner at the top listing what
+differs from yours, for example:
+
+> Calculated with the sender's settings: comma decimals (1,5), DD/MM/YYYY
+> dates, Metric volume units.
+
+Choose **Use mine** in the banner to switch the note to your settings. Its
+text stays as written. When the decimal point, date format or volume units
+differ, some lines may calculate differently with your settings (`1,5` may
+no longer mean one and a half, `03/04` may become March 4 instead of 3
+April), so you're asked first. When only how results look differs, the note
+switches straight away.
+
+Sharing a note you received sends it with the settings it uses.
 
 ### Shared notes on the free plan
 
