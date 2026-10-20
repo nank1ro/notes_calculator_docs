@@ -9,10 +9,13 @@ Use `to` or `in` or `as` to convert into a particular unit.
 
 See all the available units in the [Unit Reference](/syntax/units--conversions/unit_reference/).
 
+The examples on this page use the dot as the decimal point (see
+[Decimal Point & Thousands Separators](/syntax/decimal_and_thousands/)).
+
 ```
-10 km in m                            | 10.000 m
-3 weeks in days                       | 21 days 
-100 pounds in kg                      | 45,36 kg
+10 km in m                            | 10,000 m
+3 weeks in days                       | 21 days
+100 pounds in kg                      | 45.36 kg
 ```
 
 ## Wrapping a Value in a Unit
@@ -38,34 +41,111 @@ $20 + 30                              | $50
 
 ## Adding & Subtracting Mixed Units
 
-When adding or subtracting different units of the same kind, the larger unit wins, whichever order you type them in.
+Adding different units of the same kind answers in the larger unit, whichever
+order you type them in. Subtracting keeps the first unit.
 Use `in <unit>` to choose a different unit.
 ```
-1 km + 300 m                          | 1.3 km
-300 m + 1 km                          | 1.3 km
-500 ml + 1 L                          | 1.5 L
-1 lb + 8 oz                           | 1.5 lb
+1 km + 300 m                          | 1.30 km
+500 ml + 1 L                          | 1.50 L
+1 L + 500 ml                          | 1.50 L
+1 cm - 1 m                            | -99 cm
 1 km + 300 m in m                     | 1,300 m
 ```
 
-When units don't share a common base unit, the last used unit wins. The
-currency result below uses an illustrative rate of USD 1 = EUR 0.8; live
-currency results vary with the app's current rate.
+Durations have their own rules, see
+[Durations](/features/dates_and_times/#durations).
+
+## Currencies
+
+Adding different currencies answers in the last currency, and subtracting
+keeps the first. The results below use illustrative rates; live currency
+results vary with the app's current rates.
 ```
-$200 + €200                           | €360
+5 USD + 3 EUR                         | €7.55
+5 EUR - 3 USD                         | €2.27
+5 GBP + 3 EUR in USD                  | $9.73
+```
+
+## Feet and Inches, Pounds and Ounces
+
+Feet and inches, and pounds and ounces, show as a breakdown:
+```
+5 ft + 3 in                           | 5 feet 3 inches
+63 inches                             | 5 feet 3 inches
+1 lb + 8 oz                           | 1 lb 8 oz
+20 oz                                 | 1 lb 4 oz
+```
+
+Convert with `in feet and inches` or `in pounds and ounces`. For a decimal,
+write `in ft` or use a fraction:
+```
+190.5 cm in feet and inches           | 6 feet 3 inches
+5 ft 11 in in cm                      | 180.34 cm
+63 inches in ft                       | 5.25 feet
+1/3 ft                                | 0.33 feet
 ```
 
 ## Multiplying Units
 
-When multiplying units, the result will be a supported math compound unit:
+Multiplying lengths gives an area or a volume, and powers of a length work
+too:
 
 ```
 10m x 10m                             | 100 m²
+2 m * 30 cm                           | 0.60 m²
+(4 m)^2                               | 16 m²
+(2 km)^3                              | 8 km³
 ```
+
+Multiplying two amounts of another kind, such as `2 kg * 3 kg`, shows nothing.
 
 An implicit rate will be made when a supported unit cannot be created through multiplication:
 ```
 $30 × 4 days                          | $120
+```
+
+## Dividing Units
+
+Dividing two amounts of the same kind gives a plain number, and dividing a
+distance by a time gives a speed. Multiply a speed by a time to get a
+distance:
+
+```
+6 kg / 2 kg                           | 3
+1200 EUR / 400 EUR                    | 3
+100 km / 2 h                          | 50 km/h
+50 km/h * 3 h                         | 150 km
+```
+
+## Combining Different Kinds of Units
+
+Multiplying or dividing two different kinds of units gives the unit you'd
+expect, when the line is just that one step:
+
+```
+5 V * 2 amps                          | 10 W
+2 kW * 3 h                            | 6 kWh
+6 kWh / 3 kW                          | 2 hours
+10 N * 2 m                            | 20 N⋅m
+1 GB / 100 Mbps                       | 80 seconds
+12 V * 2 Ah in Wh                     | 24 Wh
+```
+
+In a longer calculation such a step shows nothing. Put it in a
+[variable](/features/variables/) first:
+
+```
+5 V * 2 amps * 3 h                    |
+p = 5 V * 2 amps                      | 10 W
+p * 3 h                               | 30 Wh
+```
+
+Related kinds also convert into each other:
+
+```
+1 Hz in rpm                           | 60 rpm
+10 Nm in J                            | 10 J
+2 Ω in siemens                        | 0.50 siemens
 ```
 
 

@@ -1,6 +1,6 @@
 ---
 title: Line References
-description: Reference the value of an earlier line by its line number.
+description: Reference the value of an earlier line by its line number, or add up a block of lines with a range like line2...line6.
 sidebar:
   order: 6
 ---
@@ -39,11 +39,64 @@ amount with units or a currency, the reference renders the same way:
 line1 + 1                              | 6 mi
 ```
 
+## Line ranges
+
+Write two line numbers with three dots between them to use a block of lines:
+`line2...line5`, the short form `l2...l5`, or just `2...5`. On its own, a
+range adds up the lines, first and last included:
+
+```
+# Groceries                            |
+12.50                                  | 12.50
+8.20                                   | 8.20
+                                       |
+4.30                                   | 4.30
+line2...line5                          | 25
+2...5                                  | 25
+```
+
+Blank lines, headings, text and earlier total lines inside the range are
+skipped. The order doesn't matter: `l5...l2` is the same as `l2...l5`.
+Amounts with units and currencies add up the same way as with `+`:
+
+```
+1 hour                                 | 1 hour
+45 min                                 | 45 minutes
+2 hours                                | 2 hours
+1...3                                  | 3 hours 45 min
+```
+
+Inside a function, a range is the list of its values, so you can mix it with
+other arguments:
+
+```
+10                                     | 10
+20                                     | 20
+30                                     | 30
+40                                     | 40
+avg(1...4)                             | 25
+max(line1...line4, 50)                 | 50
+sum(l1...l3)                           | 60
+median(1...4)                          | 25
+```
+
+This works with `sum`, `avg`, `min`, `max`, `median` and `stddev` (see
+[multi-argument functions](/syntax/general/functions/#multi-argument-functions)).
+
+Only three dots make a range (the `…` character works too). Two dots
+(`line2..line5`) and a colon (`2:5`) aren't ranges, so those lines stay blank.
+
+Editing any line inside the range updates the result.
+
 ## Live renumbering
 
 Inserting a line above a reference or deleting a line shifts the numbers
 automatically: the text `line1` is rewritten to `line2` (and vice versa)
-so that the reference keeps pointing at the same logical line.
+so that the reference keeps pointing at the same logical line. Ranges are
+renumbered the same way.
+
+Results that depend on a referenced line, such as `total`, `prev` or a
+variable defined from it, update as soon as you edit that line.
 
 ## Cycle and self-reference
 

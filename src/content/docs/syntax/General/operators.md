@@ -27,6 +27,13 @@ sidebar:
 11 mod 2                            | 1
 ```
 
+`mod` works at the same level as `x` and `/`, so it's worked out before `+`
+and `-`:
+
+```
+10 + 7 mod 3                        | 11
+```
+
 ## Multiplying by writing values side by side
 
 A bracketed group written next to a value multiplies it, with or without a
