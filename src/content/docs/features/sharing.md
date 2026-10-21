@@ -60,7 +60,7 @@ yours.
 A note that uses the sender's settings has a banner at the top listing what
 differs from yours, for example:
 
-> Calculated with the sender's settings: comma decimals (1,5), DD/MM/YYYY
+> Calculated with the sender's settings: comma decimals, DD/MM/YYYY
 > dates, Metric volume units.
 
 Choose **Use mine** in the banner to switch the note to your settings. Its
