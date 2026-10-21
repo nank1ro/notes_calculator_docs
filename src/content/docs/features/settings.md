@@ -18,3 +18,7 @@ These settings change how numbers are read and how results are shown:
 
 Changing one of these updates your open notes right away: every line is read
 again with the new setting, so you don't need to reopen a note or edit it.
+
+A [shared note](/features/sharing/#the-senders-settings) can keep the
+settings of the person who shared it. It doesn't follow your settings until
+you choose **Use mine** in its banner.

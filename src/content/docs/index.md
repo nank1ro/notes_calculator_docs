@@ -29,6 +29,7 @@ Calculations are performed automatically as you type, and the result is updated 
 
 ## What's new
 
+- [Sharing a Note as a Link](/features/sharing/#the-senders-settings): a shared note opens with the sender's settings, so it shows the same results they saw. **Use mine** switches it to yours.
 - [Words and Numbers](/features/words_and_numbers/): lines like `100 groceries` or `3 kg apples` now show a result.
 - [Durations](/features/dates_and_times/#durations): `2 weeks + 1 day` shows 2 weeks 1 day, and date differences show years, months, weeks and days.
 - [Mixed units](/syntax/units--conversions/converting_units/): feet and inches, pounds and ounces, and mixed currencies follow simple rules.
