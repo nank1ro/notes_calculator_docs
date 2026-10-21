@@ -54,6 +54,8 @@ the comma as the decimal point shows 2,5 for you too, even if you use the dot.
 
 Your own settings don't change, and your other notes keep using them. If the
 sender's settings are the same as yours, the note opens as an ordinary note.
+Links shared before version 2.9.0 don't carry settings, so they open with
+yours.
 
 A note that uses the sender's settings has a banner at the top listing what
 differs from yours, for example:
