@@ -6,7 +6,7 @@ sidebar:
   order: 6
 ---
 
-Write a big number as a short suffix instead of counting zeros: `2M` is two million and `1T` is a trillion. Each scale also has a spelled-out name, such as `billion`. To decode a pasted string like `1.000.000.000.000.000`, see [large number notation explained](https://notescalculator.com/blog/large-number-notation/).
+Write a big number as a short suffix instead of counting zeros: `2M` is two million and `1T` is a trillion. Each scale also has a spelled-out name, such as `billion`. To decode a pasted string like `1.000.000.000.000.000`, see [what a pasted big number means](https://notescalculator.com/blog/big-numbers/#what-a-pasted-number-like-1000000000000000-means).
 
 
 | Scale | Name        | Example                | Value |
