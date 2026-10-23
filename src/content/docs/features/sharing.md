@@ -88,6 +88,11 @@ note you have open is saved as an ordinary note.
 ## Examples from the website
 
 The examples on [notescalculator.com](https://notescalculator.com) link
-straight into the app. Lifetime opens each example in its own tab. On the free
-plan, an example becomes your note when you have none (or only the untouched
-sample or an empty note); otherwise it's added at the end of your note.
+straight into the app with **Open in Notes Calculator**. Each one is a shared
+note, so it opens the same way as a link someone sends you (see above): in its
+own tab on Lifetime, and on the free plan as your note or in a read-only tab.
+
+The examples are written with the dot as the decimal point, MM/DD/YYYY dates
+and US Customary volume units, and they open with those settings, so they show
+the same results as the website. If your settings differ, the banner lists
+what's different, and **Use mine** switches the example to your settings.
