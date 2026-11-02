@@ -68,9 +68,36 @@ planned = 40                    | 40
 done / planned as %             | 75%
 ```
 
+## Percentage phrases with variables
+
+The phrases above work with variables and calculations too, not just
+numbers:
+
+```
+x = 30                          | 30
+y = 120                         | 120
+x as a % of y                   | 25%
+x is what % of y                | 25%
+x to y as %                     | 300%
+```
+
+In a longer line, `as %` shows the whole line before it as a percentage:
+
+```
+30 + 20/200 as %                | 3,010%
+```
+
 ## Operations with percentages
 ```
 10% + 20%                       | 30%
 90% - 40%                       | 50%
 10% x 20%                       | 2%
+```
+
+Adding a plain number to a percentage, or taking one away, gives a
+percentage:
+
+```
+25% + 10                        | 1,025%
+5% - 3                          | -295%
 ```

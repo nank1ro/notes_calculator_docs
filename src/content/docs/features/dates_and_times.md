@@ -50,6 +50,15 @@ Apr 22                                 | 04/22/2026
 22 April 2026                          | 04/22/2026
 ```
 
+**Month and year**: a date on the 1st of that month. Adding to it shows the
+full date:
+
+```
+April 2026                             | April 2026
+April 2026 - March 2026                | 1 month
+April 2026 + 1 day                     | 04/02/2026
+```
+
 ## Named Weekdays
 
 Reference specific weekdays relative to today.
@@ -193,6 +202,15 @@ year. Dates use calendar months instead (see
 ```
 1 year in days                         | 365 days
 12 months in years                     | 1 year
+```
+
+Months and years written side by side with smaller units keep their parts,
+and a date adds them on the calendar, months first:
+
+```
+1 month 1 day                          | 1 month 1 day
+2 years 3 months                       | 2 years 3 months
+2026-01-31 + 1 month 1 day             | 03/01/2026
 ```
 
 ## ISO 8601 & Unix Timestamps

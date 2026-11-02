@@ -32,6 +32,13 @@ round(3.14159, 2)               | 3.14
 1.8 rounded down                | 1
 ```
 
+A result that is a whole number, give or take floating-point noise, stays
+that whole number:
+
+```
+0.1 * 3 * 10 rounded up         | 3
+```
+
 ## Rounded to nearest multiple
 ```
 47 to nearest 5                 | 45
