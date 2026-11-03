@@ -108,13 +108,15 @@ $30 × 4 days                          | $120
 
 Dividing two amounts of the same kind gives a plain number, and dividing a
 distance by a time gives a speed. Multiply a speed by a time to get a
-distance:
+distance, or divide a distance by a speed to get a time:
 
 ```
 6 kg / 2 kg                           | 3
 1200 EUR / 400 EUR                    | 3
 100 km / 2 h                          | 50 km/h
 50 km/h * 3 h                         | 150 km
+450 miles / 60 mph                    | 7.50 hours
+100 km / 50 km/h                      | 2 hours
 ```
 
 ## Combining Different Kinds of Units

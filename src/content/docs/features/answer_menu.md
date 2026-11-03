@@ -8,7 +8,10 @@ sidebar:
 Every line has an answer menu.
 
 - **Desktop:** hover over the answer and click the small **⋯** button next to it.
-- **Mobile:** long-press the answer, or the empty space where it would be.
+- **Mobile:** tap the answer. The menu opens with the answer's details at the
+  top. Tapping the result side of a line with no result opens it too, so you
+  can give the line [custom text](#custom-text); on an empty line, long-press
+  there instead. If the keyboard is up, the menu opens once it has closed.
 
 ## Copy result
 

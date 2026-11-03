@@ -14,14 +14,18 @@ decimal places, worked out with your settings.
 - **Desktop and web:** right-click the note's tab and choose **Share link**,
   or open the command palette (**Cmd/Ctrl + K**) and choose **Share link** to
   share the open note. The link is copied to your clipboard.
-- **iOS and Android:** tap the share icon in the top bar to share the open
-  note, long-press a tab and choose **Share link**, or tap the share icon next
-  to a note in the **Notes** tab. Your device's share sheet opens with the
-  link.
+- **iOS and Android phones:** in a note, open the **⋯** menu and choose
+  **Share link**, or choose **Share link** from a note's **⋯** menu in the
+  notes list (see [On phones](/features/notes_and_tabs/#on-phones)).
+- **iOS and Android tablets:** tap the share icon in the top bar to share the
+  open note, long-press a tab and choose **Share link**, or tap the share icon
+  next to a note in the **Notes** tab.
+
+On iOS and Android, your device's share sheet opens with the link.
 
 An empty note can't be shared, and a very long note is too big for a link:
-in both cases a message tells you so. Export a long note instead (the tab
-menu's **Export**).
+in both cases a message tells you so. Export a long note instead (**Export**
+in the note's menu).
 
 ## What the link contains
 
@@ -36,9 +40,9 @@ version.
 
 The link opens the note in the web app.
 
-- **Lifetime:** the shared note opens in a new tab and is saved like any other
-  note.
-- **Free plan:** if you have no note yet, or only the untouched sample note or
+- **[Lifetime](/features/plans_and_sync/):** the shared note opens in a new tab
+  and is saved like any other note.
+- **[Free plan](/features/plans_and_sync/):** if you have no note yet, or only the untouched sample note or
   an empty note, the shared note becomes your note. Otherwise it opens
   read-only in its own tab, so your note stays as it is.
 
