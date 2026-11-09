@@ -8,7 +8,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'Notes Calculator Documentation',
-      customCss: ['./src/styles/calculation-examples.css'],
+      customCss: ['./src/styles/calculation-examples.css', './src/styles/table-chunks.css'],
       logo: {
         src: './src/assets/logo.png',
         alt: 'Notes Calculator logo',
@@ -48,4 +48,8 @@ export default defineConfig({
   },
   site: 'https://docs.notescalculator.com',
   output: "static",
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: 'viewport',
+  },
 });
