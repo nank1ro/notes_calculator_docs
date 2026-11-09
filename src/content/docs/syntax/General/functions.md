@@ -28,7 +28,7 @@ sidebar:
 | `exp()`   | Exponential | Returns the value of e raised to the power of a number |
 | `fact()` | Factorial | Returns the factorial of a number `n!` (if the number is negative, the absolute value of it is used) |
 
-### Examples
+## Examples
 ```
 sqrt(16)                    | 4
 cbrt(27)                    | 3

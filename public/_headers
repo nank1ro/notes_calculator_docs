@@ -1,0 +1,9 @@
+# Pages: short cache so prefetched pages are reused when a link is tapped.
+/
+  Cache-Control: public, max-age=300
+/*/
+  Cache-Control: public, max-age=300
+
+# Fingerprinted build assets never change.
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable

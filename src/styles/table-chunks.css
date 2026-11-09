@@ -1,0 +1,34 @@
+/* A long reference table split into chunks: the browser only lays out chunks near the screen. */
+.table-chunk {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 7500px;
+}
+
+@media (max-width: 40rem) {
+  .table-chunk {
+    contain-intrinsic-size: auto 13000px;
+  }
+}
+
+.table-chunk + .table-chunk {
+  margin-top: 0;
+}
+
+/* Fixed column widths keep the chunks aligned as one table. */
+.sl-markdown-content .table-chunk table {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.table-chunk :is(th, td) {
+  overflow-wrap: anywhere;
+}
+
+.table-chunk th:nth-child(1) {
+  width: 30%;
+}
+
+.table-chunk th:nth-child(2) {
+  width: 25%;
+}
