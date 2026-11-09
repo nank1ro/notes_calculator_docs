@@ -31,6 +31,8 @@ Calculations are performed automatically as you type, and the result is updated 
 
 - [Percentages](/syntax/percentages/#percentage-phrases-with-variables): `x as a % of y`, `x is what % of y` and `x to y as %` work with variables and calculations, and `25% + 10` shows 1,025%.
 - [Rounding](/syntax/rounding/#rounded-up--down): rounding up or down no longer goes one too far when a result lands a hair off a whole number.
+- [Folders](/features/folders/): group your notes in folders, move notes between them, and choose how folders look.
+- [Notes, Sidebar and Tabs](/features/notes_and_tabs/#the-notes-sidebar): the notes sidebar lists your notes with search, sorting and a menu for each note.
 - [Notes, Sidebar and Tabs](/features/notes_and_tabs/#on-phones): on phones, the app opens on your notes list and a note opens as its own page, with a **⋯** menu for its actions. Swipe a note in the list to delete it. Tablets and computers list notes in a sidebar, or in tabs if you prefer.
 - [Answer Menu](/features/answer_menu/): on iOS and Android, tap a result to open its menu, with the result's details at the top.
 - [Durations](/features/dates_and_times/#months-and-years): months and years side by side with smaller units work, so `1 month 1 day` shows 1 month 1 day and `2026-01-31 + 1 month 1 day` shows March 1.
@@ -52,7 +54,7 @@ Calculations are performed automatically as you type, and the result is updated 
 - [Settings](/features/settings/): changing a setting updates your open notes right away.
 - [Headings](/features/headings_and_comments/#headings): pasting text with Markdown headings like `# Title` makes headings.
 - [Answer Menu](/features/answer_menu/): copy a result, choose its decimal places, or replace it with your own text.
-- [Decimal Point & Thousands Separators](/syntax/decimal_and_thousands/): type grouped numbers like `1.234.567` (matching your "Use dot as decimal point" setting) or `1_000_000` with underscores.
+- [Decimal Point & Thousands Separators](/syntax/decimal_and_thousands/): type grouped numbers like `1.234.567` (matching your **Decimal point** setting) or `1_000_000` with underscores.
 - [Line References](/features/line_references/): refer to an earlier line by its number, e.g. `line1`.
 - [User-Defined Functions](/syntax/general/user_functions/): define your own functions like `f(x) = 2*x + 1`.
 - [Number Bases & Scientific Notation](/syntax/bases_and_scientific/): hex, binary, octal, and scientific literals plus `in hex` / `as scientific` postfixes.

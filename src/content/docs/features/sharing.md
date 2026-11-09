@@ -41,11 +41,12 @@ version.
 
 The link opens the note in the web app.
 
-- **[Lifetime](/features/plans_and_sync/):** the shared note opens in a new tab
-  and is saved like any other note.
+- **[Lifetime](/features/plans_and_sync/):** the shared note opens as a new
+  note (in a new tab with the tabs layout, on its own page on phones) and is
+  saved like any other note.
 - **[Free plan](/features/plans_and_sync/):** if you have no note yet, or only the untouched sample note or
   an empty note, the shared note becomes your note. Otherwise it opens
-  read-only in its own tab, so your note stays as it is.
+  read-only, so your note stays as it is.
 
 If a link is broken or incomplete, you see "This shared note couldn't be
 opened." instead.
@@ -80,22 +81,28 @@ Sharing a note you received sends it with the settings it uses.
 ### Shared notes on the free plan
 
 A shared note that opens read-only has a banner at the top saying so. In that
-tab:
+note:
 
 - you can read the note and scroll it, but not edit it;
 - the [answer menu](/features/answer_menu/) only has **Copy result**;
-- the tab can't be renamed or deleted;
-- the note isn't saved: closing the tab discards it.
+- it can't be renamed or deleted;
+- the note isn't saved. With the tabs layout, closing its tab discards it. On
+  a phone it opens as its own page, and leaving the page discards it.
 
-Lifetime saves shared notes in their own tabs: once you upgrade, any shared
-note you have open is saved as an ordinary note.
+With the sidebar, the note is listed in the sidebar marked **Read-only**. Its
+menu has **Share link** and **Export**, and no **Close**.
+
+Lifetime saves shared notes: once you upgrade, any read-only shared note you
+have open on a computer or tablet is saved as an ordinary note. On a phone the
+preview isn't kept, so the banner doesn't offer the upgrade.
 
 ## Examples from the website
 
 The examples on [notescalculator.com](https://notescalculator.com) link
 straight into the app with **Open in Notes Calculator**. Each one is a shared
 note, so it opens the same way as a link someone sends you (see above): in its
-own tab on Lifetime, and on the free plan as your note or in a read-only tab.
+own note on Lifetime, and on the free plan as your note or as a read-only
+note.
 
 The examples are written with the dot as the decimal point, MM/DD/YYYY dates
 and US Customary volume units, and they open with those settings, so they show

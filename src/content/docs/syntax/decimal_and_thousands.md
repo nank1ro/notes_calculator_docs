@@ -1,6 +1,6 @@
 ---
 title: Decimal Point & Thousands Separators
-description: How Notes Calculator reads numbers written with a decimal point and thousands separators, based on your "Use dot as decimal point" setting.
+description: How Notes Calculator reads numbers written with a decimal point and thousands separators, based on your "Decimal point" setting.
 ---
 
 Notes Calculator reads numbers written with thousands separators the same way it
@@ -8,16 +8,16 @@ shows them, so you can type or paste a grouped number like `1.234.567` and get
 its value.
 
 Which character is the decimal point and which is the thousands separator is
-controlled by the **Use dot as decimal point** setting.
+controlled by the **Decimal point** setting (**1.5** or **1,5**).
 
 ## The two conventions
 
 | Setting | Decimal point | Thousands separator | Example input  | Value      |
 | ------- | ------------- | ------------------- | -------------- | ---------- |
-| **Off** | `,` comma     | `.` dot             | `1.234.567,89` | 1234567.89 |
-| **On**  | `.` dot       | `,` comma           | `1,234,567.89` | 1234567.89 |
+| **1,5** | `,` comma     | `.` dot             | `1.234.567,89` | 1234567.89 |
+| **1.5** | `.` dot       | `,` comma           | `1,234,567.89` | 1234567.89 |
 
-With the setting off: comma is the decimal point, dot groups the thousands:
+With **Decimal point** set to **1,5**: comma is the decimal point, dot groups the thousands:
 
 ```
 1.234.567                              | 1.234.567
@@ -26,7 +26,7 @@ With the setting off: comma is the decimal point, dot groups the thousands:
 2 * 1.234.567                          | 2.469.134
 ```
 
-With **Use dot as decimal point** turned on: dot is the decimal point, comma
+With **Decimal point** set to **1.5**: dot is the decimal point, comma
 groups the thousands:
 
 ```
@@ -73,7 +73,7 @@ when reading the number, wherever it sits. With the comma as the decimal point:
 3.14                                   | 314
 ```
 
-With **Use dot as decimal point** on, it works the other way round: `1,000`
+With **Decimal point** set to **1.5**, it works the other way round: `1,000`
 is one thousand, `1.5` is one and a half, and `1,5` is fifteen.
 
 ## Underscores for readability
@@ -102,7 +102,7 @@ call is treated as an argument separator rather than a thousands group:
 sum(100, 200, 300)                     | 600
 ```
 
-With **Use dot as decimal point** on, `sum(1,234,567)` is therefore read as the
+With **Decimal point** set to **1.5**, `sum(1,234,567)` is therefore read as the
 three arguments `1`, `234`, `567` (which sum to `802`), not as one grouped
 number. To pass a grouped number as a single argument, wrap it in parentheses:
 

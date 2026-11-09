@@ -9,8 +9,8 @@ These settings change how numbers are read and how results are shown:
 
 | Setting | What it does |
 | ------- | ------------ |
-| **Use dot as decimal point** | Whether the dot or the comma is the decimal point. See [Decimal Point & Thousands Separators](/syntax/decimal_and_thousands/). |
-| **Use European date format** | Whether dates read day first (DD/MM/YYYY) or month first (MM/DD/YYYY). See [Dates & Times](/features/dates_and_times/). |
+| **Decimal point** | Whether the dot or the comma is the decimal point (**1.5** or **1,5**). See [Decimal Point & Thousands Separators](/syntax/decimal_and_thousands/). |
+| **Date format** | Whether dates read day first (**31/12/2026**) or month first (**12/31/2026**). See [Dates & Times](/features/dates_and_times/). |
 | **Volume units** | US Customary, Imperial or Metric gallons, pints, cups and spoons. See [Volume Units Setting](/syntax/units--conversions/volume_units/). |
 | **Number format** | Auto, Scientific or Fixed. See [Number Bases & Scientific Notation](/syntax/bases_and_scientific/#global-default-format). |
 | **Result decimals** | How many decimal places results show by default, or **Full (no rounding)**. A single line can still change it from the [answer menu](/features/answer_menu/). |
@@ -25,4 +25,5 @@ you choose **Use mine** in its banner.
 
 **Settings**, **Appearance** also holds **Notes layout** (sidebar or tabs, see
 [Notes, Sidebar and Tabs](/features/notes_and_tabs/)) and **Folders** (see
-[Folders](/features/folders/)).
+[Folders](/features/folders/)). Folders show with the sidebar layout, and are
+hidden with tabs.

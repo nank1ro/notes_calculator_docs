@@ -44,6 +44,10 @@ If you're signed in but have no internet, the app opens with your settings and
 notes as they are on the device. Once you're back online it catches up by
 itself and uploads what you changed meanwhile.
 
+Until the app confirms your Lifetime, you can edit all your notes, but
+you can't create more notes until you're back online and the app has checked
+your plan.
+
 ## Signing out and deleting your account
 
 Signing out of a free account keeps your note on the device: the note you
