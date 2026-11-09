@@ -2,7 +2,7 @@
 title: Sharing a Note as a Link
 description: Share a note as a link that opens in the Notes Calculator web app, custom result text and your settings included.
 sidebar:
-  order: 9
+  order: 10
 ---
 
 Share any note as a link. Whoever opens the link sees the note in the Notes
@@ -11,15 +11,16 @@ decimal places, worked out with your settings.
 
 ## Creating a link
 
-- **Desktop and web:** right-click the note's tab and choose **Share link**,
+- **Desktop and web:** right-click the note in the sidebar (or its tab, with
+  the tabs layout) and choose **Share link**,
   or open the command palette (**Cmd/Ctrl + K**) and choose **Share link** to
   share the open note. The link is copied to your clipboard.
 - **iOS and Android phones:** in a note, open the **⋯** menu and choose
   **Share link**, or choose **Share link** from a note's **⋯** menu in the
   notes list (see [On phones](/features/notes_and_tabs/#on-phones)).
 - **iOS and Android tablets:** tap the share icon in the top bar to share the
-  open note, long-press a tab and choose **Share link**, or tap the share icon
-  next to a note in the **Notes** tab.
+  open note, long-press the note in the sidebar (or its tab) and choose
+  **Share link**, or tap the share icon next to a note in the **Notes** tab.
 
 On iOS and Android, your device's share sheet opens with the link.
 

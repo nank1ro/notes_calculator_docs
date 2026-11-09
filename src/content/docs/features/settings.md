@@ -2,7 +2,7 @@
 title: Settings
 description: The settings that change how results are calculated and shown, and how they apply to open notes.
 sidebar:
-  order: 10
+  order: 11
 ---
 
 These settings change how numbers are read and how results are shown:
@@ -22,3 +22,7 @@ again with the new setting, so you don't need to reopen a note or edit it.
 A [shared note](/features/sharing/#the-senders-settings) can keep the
 settings of the person who shared it. It doesn't follow your settings until
 you choose **Use mine** in its banner.
+
+**Settings**, **Appearance** also holds **Notes layout** (sidebar or tabs, see
+[Notes, Sidebar and Tabs](/features/notes_and_tabs/)) and **Folders** (see
+[Folders](/features/folders/)).

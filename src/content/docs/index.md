@@ -31,7 +31,7 @@ Calculations are performed automatically as you type, and the result is updated 
 
 - [Percentages](/syntax/percentages/#percentage-phrases-with-variables): `x as a % of y`, `x is what % of y` and `x to y as %` work with variables and calculations, and `25% + 10` shows 1,025%.
 - [Rounding](/syntax/rounding/#rounded-up--down): rounding up or down no longer goes one too far when a result lands a hair off a whole number.
-- [Notes and Tabs](/features/notes_and_tabs/#on-phones): on phones, the app opens on your notes list and a note opens as its own page, with a **⋯** menu for its actions. Swipe a note in the list to delete it. Tablets and computers keep tabs.
+- [Notes, Sidebar and Tabs](/features/notes_and_tabs/#on-phones): on phones, the app opens on your notes list and a note opens as its own page, with a **⋯** menu for its actions. Swipe a note in the list to delete it. Tablets and computers list notes in a sidebar, or in tabs if you prefer.
 - [Answer Menu](/features/answer_menu/): on iOS and Android, tap a result to open its menu, with the result's details at the top.
 - [Durations](/features/dates_and_times/#months-and-years): months and years side by side with smaller units work, so `1 month 1 day` shows 1 month 1 day and `2026-01-31 + 1 month 1 day` shows March 1.
 - [Words and Numbers](/features/words_and_numbers/): amounts joined by `and` or `or` add up, so `$5 coffee and $3 tea` shows $8.

@@ -2,7 +2,7 @@
 title: Plans, Accounts and Sync
 description: What the free plan and Lifetime include, how accounts work, and what happens to your note when you sign out.
 sidebar:
-  order: 11
+  order: 12
 ---
 
 Notes Calculator has two plans: the free plan and Lifetime.
@@ -35,7 +35,14 @@ Purchases** brings back a purchase you've already made.
 
 With Lifetime, your notes sync to every device you sign in to. Changes from
 your other devices show up in an open note, and a note you delete on one
-device is deleted on the others.
+device is deleted on the others. Your [folders](/features/folders/) sync too.
+
+On phones, pull the notes list down to get the notes you changed on your other
+devices. Changes also arrive by themselves when you come back to the app.
+
+If you're signed in but have no internet, the app opens with your settings and
+notes as they are on the device. Once you're back online it catches up by
+itself and uploads what you changed meanwhile.
 
 ## Signing out and deleting your account
 
