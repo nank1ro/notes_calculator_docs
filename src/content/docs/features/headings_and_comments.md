@@ -51,24 +51,29 @@ calculate and the line stays blank.
 
 ## Labels
 
-Start a line with a few words followed by a colon **and a space** to label it.
-The label is ignored, and the rest of the line is calculated as usual.
+Start a line with a few words followed by a colon to label it. The label is
+ignored, and the rest of the line is calculated as usual. The space after the
+colon is optional.
 
 ```
 Total: 42                                      | 42
+Total:100                                      | 100
 Rent: 100 + 50                                 | 150
 Tip: 20%                                       | 20%
 Label with number 5: 10 + 1                    | 11
 14: 45                                         | 45
 ```
 
-The space after the colon is what makes it a label:
+Without a space, a colon stays part of the calculation when it belongs to it:
 
-- `14:45` is a time, not a label: there is no space after the colon.
-- `Total:100` isn't a label either, so the line stays blank.
-- A ternary's colon is never read as a label: `shipping = express ? 15 : 5` still
-  calculates (see [Conditionals](/syntax/conditionals/)).
-- Only the first label on a line is stripped.
+- a time: `14:45` and `today at 20:00` are times, not labels;
+- line references: `line1:line2` is not a label;
+- a ternary: `true ? 1:0` and `shipping = express ? 15 : 5` still calculate (see
+  [Conditionals](/syntax/conditionals/));
+- brackets: in `150 (inv:2024) + 50` the bracket is a note, and the line is 200;
+- a web address: `https://example.com` is not a label.
+
+Only the first label on a line is stripped.
 
 ## Notes in brackets
 
