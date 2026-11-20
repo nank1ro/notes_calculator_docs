@@ -79,7 +79,9 @@ Only the full phrase works. `sqrt of 16` isn't recognised, so use `sqrt(16)`.
 
 ## Multi-argument functions
 
-These functions accept two or more arguments separated by commas.
+These functions accept two or more arguments separated by commas or semicolons
+(`max(3; 7; 2)`). With the comma as your decimal point, see
+[Separating function arguments](/syntax/decimal_and_thousands/#separating-function-arguments).
 
 | Function | Arity | Behaviour |
 | -------- | ----- | --------- |

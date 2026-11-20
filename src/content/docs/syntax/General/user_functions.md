@@ -23,7 +23,7 @@ f(10)                                  | 21
 
 ## Multiple arguments
 
-Functions accept any number of parameters separated by commas.
+Functions accept any number of parameters separated by commas or semicolons.
 
 ```
 area(w, h) = w * h                     |
@@ -31,6 +31,9 @@ area(3, 4)                             | 12
 
 vol(l, w, h) = l * w * h               |
 vol(2, 3, 4)                           | 24
+
+hyp2(a; b) = a*a + b*b                 |
+hyp2(3; 4)                             | 25
 ```
 
 ## Naming rules
