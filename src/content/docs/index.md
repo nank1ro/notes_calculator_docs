@@ -29,6 +29,7 @@ Calculations are performed automatically as you type, and the result is updated 
 
 ## What's new
 
+- [Decimal Point & Thousands Separators](/syntax/decimal_and_thousands/#separating-function-arguments): a semicolon separates function arguments, so with the comma as the decimal point `max(1,5; 4,5)` shows 4,50.
 - [Percentages](/syntax/percentages/#percentage-phrases-with-variables): `x as a % of y`, `x is what % of y` and `x to y as %` work with variables and calculations, and `25% + 10` shows 1,025%.
 - [Rounding](/syntax/rounding/#rounded-up--down): rounding up or down no longer goes one too far when a result lands a hair off a whole number.
 - [Folders](/features/folders/): group your notes in folders, move notes between them, and choose how folders look.

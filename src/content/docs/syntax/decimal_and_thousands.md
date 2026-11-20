@@ -93,18 +93,32 @@ doubled underscore (`_1000`, `1000_`, `1__000`) isn't a valid number, so the
 line just stays blank. Underscores group the whole-number part only; they aren't
 read inside the decimal part or an exponent.
 
-## Inside functions, commas separate arguments
+## Separating function arguments
 
-A comma is also how you separate function arguments, so a comma inside a function
-call is treated as an argument separator rather than a thousands group:
+A semicolon always separates function arguments, whatever your decimal-point
+setting is. A comma and a space separate them too:
 
 ```
+sum(100; 200; 300)                     | 600
 sum(100, 200, 300)                     | 600
 ```
 
-With **Decimal point** set to **1.5**, `sum(1,234,567)` is therefore read as the
-three arguments `1`, `234`, `567` (which sum to `802`), not as one grouped
-number. To pass a grouped number as a single argument, wrap it in parentheses:
+With **Decimal point** set to **1,5**, a comma followed by a digit is the
+decimal point, so `max(1,2)` is the one number 1,2. Put a space after a comma
+that separates arguments, or use a semicolon:
+
+```
+max(1,2)                               | 1,20
+max(1;2)                               | 2
+max(1,5; 4,5)                          | 4,50
+max(1,50, 2,3, 4,5)                    | 4,50
+```
+
+With **Decimal point** set to **1.5**, a comma inside a function call is
+always an argument separator, never a thousands group. `sum(1,234,567)` is
+therefore read as the three arguments `1`, `234`, `567` (which sum to `802`),
+not as one grouped number. To pass a grouped number as a single argument, wrap
+it in parentheses:
 
 ```
 sum((1,234,567), 3)                    | 1,234,570
