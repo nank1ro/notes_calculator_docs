@@ -114,6 +114,12 @@ today in UTC                           | 04/22/2026
 2026-04-22 in America/New_York         | 04/22/2026
 ```
 
+The details of a time in another place show that place's time and its offset
+from UTC, such as `2026-04-22T21:00:00.000+09:00` for `now in Tokyo`. On a
+computer, hover over the result to see them; on a phone, tap the result (see
+[Answer Menu](/features/answer_menu/)). A time without a place shows your own
+time and offset.
+
 Supported formats:
 
 - City names, single or multi-word: `Tokyo`, `London`, `Los Angeles`, `New York`, `Hong Kong`, `Buenos Aires`, `Ho Chi Minh City`, `Kuala Lumpur`, and ~80 more.

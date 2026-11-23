@@ -21,7 +21,7 @@ as it is.
 
 Your account is on the **Account** page:
 
-- **Phones:** tap the account icon on the notes list.
+- **Phones:** tap your avatar at the top of the notes list, then **Account**.
 - **Tablets:** tap the **Account** tab.
 - **Desktop and web:** open the command palette (**Cmd/Ctrl + K**) and
   choose **Profile**.

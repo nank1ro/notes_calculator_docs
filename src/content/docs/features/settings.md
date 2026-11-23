@@ -27,3 +27,11 @@ you choose **Use mine** in its banner.
 [Notes, Sidebar and Tabs](/features/notes_and_tabs/)) and **Folders** (see
 [Folders](/features/folders/)). Folders show with the sidebar layout, and are
 hidden with tabs.
+
+## Highlight results
+
+Results take the colours of the text you type: numbers, currencies, units and
+time words have the same colour in the result as in the line. Exported
+[PDFs](/features/export_and_import/) look the same. To keep results plain,
+turn off **Highlight results** in **Settings**, **Appearance**, **Syntax
+highlighting**.

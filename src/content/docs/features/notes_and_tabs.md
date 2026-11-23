@@ -35,10 +35,27 @@ or **Name Z to A**).
 ### The note menu
 
 Right-click a note in the sidebar, or use its **⋯** button, to **Rename**,
-**Share link**, **Export** or **Delete** it, or to **Move to folder** (see
-[Folders](/features/folders/)). On iOS and Android tablets, long-press the
-note. For sharing and exporting, see
-[Sharing a Note as a Link](/features/sharing/).
+**Duplicate**, **Share link**, **Export** or **Delete** it, or to **Move to
+folder** (see [Folders](/features/folders/)). On iOS and Android tablets,
+long-press the note. For sharing, see
+[Sharing a Note as a Link](/features/sharing/). For exporting, see
+[Exporting and Importing Notes](/features/export_and_import/).
+
+### Duplicating a note
+
+**Duplicate** makes a copy of the note and opens it at once. You can also
+choose **Duplicate note** in the command palette (**Cmd/Ctrl + K**), or press
+**Cmd/Ctrl + D** in the desktop apps, to duplicate the open note.
+
+- The copy is in the same folder, with the same content and the note's own
+  settings.
+- Its name ends with "copy", so you can tell it from the note. When the note
+  has a heading, the copy's first heading ends with "copy" too.
+- An empty note can't be duplicated.
+- On the [free plan](/features/plans_and_sync/), you have one note, so a copy
+  needs Lifetime.
+
+### Deleting a note
 
 You're asked to confirm before a note is deleted, and the question names the
 note. After you delete the note you're on, the app goes back to the note you
@@ -85,9 +102,9 @@ have no choice: they always show the notes list.
 With tabs, each note opens in its own tab. Double-click a tab to rename the
 note.
 
-The tab menu has the actions for one note: closing tabs, **Export** and
-**Share link** (see [Sharing a Note as a Link](/features/sharing/)), and
-**Delete**. After you close or delete the tab you're on, the app goes back to
+The tab menu has the actions for one note: closing tabs, **Duplicate**,
+**Export** and **Share link** (see [Sharing a Note as a Link](/features/sharing/)),
+and **Delete**. After you close or delete the tab you're on, the app goes back to
 the note you were viewing before it.
 
 - **Desktop and web:** right-click a tab.
@@ -101,19 +118,25 @@ app. Tablets and computers have the sidebar or tabs.
 The notes list is the home screen. Pull it down to get the notes you changed
 on your other devices (see [Plans, Accounts and Sync](/features/plans_and_sync/#sync)).
 Tap a note to open it as its own page, with **Back** to return to the list,
-the note's title, and a **⋯** menu with **New note**, **Rename**,
-**Find in note**, **Share link**, **Export**, **Settings**,
+the note's title, and a **⋯** menu with **New note**, **Duplicate**,
+**Rename**, **Find in note**, **Share link**, **Export**, **Settings**,
 **Documentation** and **Delete**. If you left a note open, it
 opens again when you come back to the app.
 
-Each note in the list has a **⋯** menu too, with **Share link**, **Export**,
-**Move to folder** and **Delete**. Long-press a note to open the same menu,
+Each note in the list has a **⋯** menu too, with **Duplicate**,
+**Share link**, **Export**, **Move to folder** and **Delete**. Long-press a note to open the same menu,
 or swipe it to the left to delete it. Deleting a note asks you to confirm, in
 a sheet that slides up from the bottom: **Cancel** keeps the note, **Confirm**
 deletes it.
 
 To rename a note, choose **Rename** in the **⋯** menu of the open note, or tap
 its title. A text field opens in the same kind of sheet.
+
+Tap your avatar at the top of the notes list to open a menu with your
+**Account**, **What's new**, **Settings**, **Import notes** (see
+[Exporting and Importing Notes](/features/export_and_import/#importing-notes))
+and **Documentation**. The top bar keeps the folder name and, while there is
+something you haven't seen, the **What's new** icon.
 
 ## Note lists
 

@@ -29,6 +29,11 @@ Calculations are performed automatically as you type, and the result is updated 
 
 ## What's new
 
+- [Exporting and Importing Notes](/features/export_and_import/): export a note as Markdown, text, CSV or PDF, and import Markdown, text or CSV files as new notes.
+- [Notes, Sidebar and Tabs](/features/notes_and_tabs/#duplicating-a-note): duplicate a note from its menu, the command palette or Cmd/Ctrl + D.
+- [Settings](/features/settings/#highlight-results): results take the colours of the text you type, also in PDFs.
+- [Notes, Sidebar and Tabs](/features/notes_and_tabs/#on-phones): on phones, your avatar opens a menu with your account, What's new, Settings, Import notes and Documentation.
+- [Timezones](/features/dates_and_times/#timezones): the details of a time in another place show that place's time and its offset from UTC.
 - [Decimal Point & Thousands Separators](/syntax/decimal_and_thousands/#separating-function-arguments): a semicolon separates function arguments, so with the comma as the decimal point `max(1,5; 4,5)` shows 4,50.
 - [Percentages](/syntax/percentages/#percentage-phrases-with-variables): `x as a % of y`, `x is what % of y` and `x to y as %` work with variables and calculations, and `25% + 10` shows 1,025%.
 - [Rounding](/syntax/rounding/#rounded-up--down): rounding up or down no longer goes one too far when a result lands a hair off a whole number.
@@ -70,5 +75,6 @@ functions, line references, and timezones. Press **Tab** to accept,
 :::tip[Syntax highlighting]
 Numbers, units, variables, operators, line references, and comments
 are colour-coded, with a palette that adapts to light and dark mode.
-Toggle in **Settings → Syntax highlighting**.
+Results take the same colours. Toggle both in **Settings**, **Appearance**,
+**Syntax highlighting** (see [Highlight results](/features/settings/#highlight-results)).
 :::
