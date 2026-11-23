@@ -46,7 +46,7 @@ To remove it, open the menu again, choose **Edit custom text**, and click
 **Clear** (the button only appears once a line has custom text).
 
 Custom text and decimal places are saved with the note, sync to your other
-devices, and appear in every export format.
+devices, and appear in every [export](/features/export_and_import/) format.
 
 Opening the menu, or clicking a result, takes the cursor out of the line you
 were editing.

@@ -26,7 +26,7 @@ On iOS and Android, your device's share sheet opens with the link.
 
 An empty note can't be shared, and a very long note is too big for a link:
 in both cases a message tells you so. Export a long note instead (**Export**
-in the note's menu).
+in the note's menu, see [Exporting and Importing Notes](/features/export_and_import/)).
 
 ## What the link contains
 
