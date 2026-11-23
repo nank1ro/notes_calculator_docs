@@ -21,6 +21,18 @@ f(5)                                   | 11
 f(10)                                  | 21
 ```
 
+A number right before a parameter multiplies it, so the same function can be
+written as in maths:
+
+```
+f(x) = 2x + 1                          |
+f(5)                                   | 11
+```
+
+To list a function's values over a range, and see its graph, use a
+[table of values](/syntax/general/tables_of_values/):
+`f(x) for x from -2 to 2 step 0.5`.
+
 ## Multiple arguments
 
 Functions accept any number of parameters separated by commas or semicolons.

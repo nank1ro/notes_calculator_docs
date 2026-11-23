@@ -60,6 +60,26 @@ If the brackets don't contain a calculation they are a note instead, and are
 ignored: `100 (rent)` is `100`. See
 [Headings and Comments](/features/headings_and_comments/).
 
+### A number before a name
+
+A number right before a variable multiplies it, as in maths. This works in
+your own [functions](/syntax/general/user_functions/) too:
+
+```
+x = 3                               | 3
+2x + 1                              | 7
+3x^2                                | 27
+```
+
+`3x^2` is 3 times x squared: the power applies to x only.
+
+Between two numbers, `x` is still the times sign, also as a capital X:
+
+```
+5 x 3                               | 15
+5 X 3                               | 15
+```
+
 ## The minus sign
 
 A leading minus applies to the whole power or factorial that follows it, the

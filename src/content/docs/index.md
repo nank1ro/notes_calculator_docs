@@ -29,6 +29,9 @@ Calculations are performed automatically as you type, and the result is updated 
 
 ## What's new
 
+- [Tables of Values](/syntax/general/tables_of_values/): `f(x) for x from -2 to 2 step 0.5` lists x and f(x) with a graph of the function. Copy the table or save the graph as a picture.
+- [Operators](/syntax/general/operators/#a-number-before-a-name): a number before a name multiplies it, so with `x = 3`, `2x + 1` shows 7.
+- [Variables](/features/variables/#variables-named-like-units): a name you declare wins over a unit after a number, so with `m = 4`, `2m` shows 8.
 - [Exporting and Importing Notes](/features/export_and_import/): export a note as Markdown, text, CSV or PDF, and import Markdown, text or CSV files as new notes.
 - [Notes, Sidebar and Tabs](/features/notes_and_tabs/#duplicating-a-note): duplicate a note from its menu, the command palette or Cmd/Ctrl + D.
 - [Settings](/features/settings/#highlight-results): results take the colours of the text you type, also in PDFs.

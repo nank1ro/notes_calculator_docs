@@ -29,6 +29,7 @@ Notes Calculator is a notepad-style calculator app for macOS, Windows, Linux, iO
 - [Built-in functions: math, rounding, trig, and more](https://docs.notescalculator.com/syntax/general/functions/)
 - [Constants: pi, e, and other built-in constants](https://docs.notescalculator.com/syntax/general/constants/)
 - [User-defined functions: define f(x) = 2*x + 1 and call it anywhere](https://docs.notescalculator.com/syntax/general/user_functions/)
+- [Tables of values: f(x) for x from -2 to 2 step 0.5 lists a function's values, with its graph](https://docs.notescalculator.com/syntax/general/tables_of_values/)
 - [Percentages: 500 + 21%, 20% of 340, discount expressions](https://docs.notescalculator.com/syntax/percentages/)
 - [Rounding: round, floor, ceil, and precision control](https://docs.notescalculator.com/syntax/rounding/)
 - [Conditionals: if/else expressions](https://docs.notescalculator.com/syntax/conditionals/)

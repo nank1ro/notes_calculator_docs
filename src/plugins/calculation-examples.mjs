@@ -1,3 +1,20 @@
+import { existsSync, readFileSync } from 'node:fs'
+
+import { valueTableHtml } from './value-table.mjs'
+
+// The tables of values of the examples, worked out by the app's engine:
+// scripts/export-example-notes.mjs, then textcalc's
+// tool/docs_examples_check_test.dart. Keyed by an example's inputs.
+const TABLES_FILE = new URL('../data/example-tables.json', import.meta.url)
+export const EXAMPLE_TABLES = existsSync(TABLES_FILE) ? JSON.parse(readFileSync(TABLES_FILE, 'utf8')) : {}
+
+/** The key of an example: its inputs, one per line, as the export writes it. */
+export function exampleKey(rows) {
+  return rows.map((row) => row?.input ?? '').join('\n')
+}
+
+const CHEVRON = '<svg class="value-table-chevron" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>'
+
 const KEYWORDS = new Set([
   'in', 'as', 'to', 'into', 'hex', 'binary', 'octal', 'scientific', 'fixed', 'decimal',
   'iso', 'iso8601', 'unix', 'timestamp', 'difference', 'between', 'time', 'date',
@@ -216,14 +233,23 @@ function highlightInput(input, regex) {
   return output + escapeHtml(input.slice(cursor))
 }
 
-export function renderCalculationFrame(rows) {
-  const inputs = rows.map((row) => row?.input ?? '').join('\n')
+export function renderCalculationFrame(rows, tables = EXAMPLE_TABLES) {
+  const inputs = exampleKey(rows)
   const regex = tokenRegex(identifierContext(rows))
+  const lineTables = tables[inputs] ?? []
   const body = rows.map((row, index) => {
     const source = row ? highlightInput(row.input, regex) : ''
-    const result = row?.result ? escapeHtml(row.result) : ''
+    const table = lineTables[index]
+    // A table line: its "N values" chip, open, folds its table and graph
+    // away (no script: the checkbox hides the next row).
+    const result = table && row?.result
+      ? `<label class="value-table-chip"><input type="checkbox" class="value-table-toggle" checked aria-label="Show the table and graph">${escapeHtml(row.result)}${CHEVRON}</label>`
+      : row?.result ? escapeHtml(row.result) : ''
     const annotation = row?.result == null ? ' calculation-example__annotation' : ''
-    return `<tr class="calculation-example__row${annotation}"><td class="calculation-example__input"><span class="calculation-example__source-wrap"><span class="calculation-example__line" aria-hidden="true">${index + 1}</span><code class="calculation-example__source">${source}</code></span></td><td class="calculation-example__result">${result}</td></tr>`
+    const line = `<tr class="calculation-example__row${annotation}"><td class="calculation-example__input"><span class="calculation-example__source-wrap"><span class="calculation-example__line" aria-hidden="true">${index + 1}</span><code class="calculation-example__source">${source}</code></span></td><td class="calculation-example__result">${result}</td></tr>`
+    return table
+      ? `${line}<tr class="calculation-example__values"><td colspan="2">${valueTableHtml(table)}</td></tr>`
+      : line
   }).join('')
 
   return `<figure class="calculation-example"><div class="calculation-example__titlebar"><img class="calculation-example__app-mark" src="/notes-calculator-icon.png" alt="" width="24" height="24"><span class="calculation-example__title">Notes Calculator</span><button class="calculation-example__copy" type="button" data-copy-text="${escapeAttribute(inputs)}" aria-label="Copy calculation inputs">Copy</button></div><table aria-label="Calculation example"><caption>Calculation example</caption><colgroup><col class="calculation-example__source-column"><col class="calculation-example__result-column"></colgroup><thead><tr><th scope="col">Calculation</th><th scope="col">Result</th></tr></thead><tbody>${body}</tbody></table></figure>`

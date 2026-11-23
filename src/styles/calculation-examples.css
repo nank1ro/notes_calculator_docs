@@ -210,3 +210,129 @@
   .calculation-example__source-wrap { column-gap: 0.5rem; }
   .calculation-example__line { padding-right: 0.45rem; }
 }
+
+/* A table of values (app 2.15): the "N values" chip, and under the line the
+   table and its graph, as the app shows them open. The checkbox folds them
+   away without a script. */
+.calculation-example { --calc-series: #3b82f6; }
+:root[data-theme='light'] .calculation-example { --calc-series: #2563eb; }
+
+.value-table-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  min-height: 1.6rem;
+  padding: 0 0.5rem;
+  border: 1px solid var(--calc-border);
+  border-radius: 6px;
+  background: var(--calc-bg);
+  cursor: pointer;
+}
+
+.value-table-toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.value-table-chip:has(.value-table-toggle:focus-visible) {
+  outline: 2px solid var(--sl-color-accent-high);
+  outline-offset: 2px;
+}
+
+.value-table-chevron {
+  fill: none;
+  stroke: var(--calc-muted);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.15s;
+}
+
+.value-table-chip:has(.value-table-toggle:checked) .value-table-chevron { transform: rotate(180deg); }
+
+.calculation-example__row:has(.value-table-toggle:not(:checked)) + .calculation-example__values { display: none; }
+
+.calculation-example .calculation-example__values > td {
+  padding: 0.25rem 0.72rem 0.9rem;
+  background: var(--calc-bg);
+}
+
+/* Right-aligned, as results are; the graph goes under the table when the
+   page is narrow. */
+.value-table-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.calculation-example table.value-table {
+  width: auto;
+  table-layout: auto;
+  border: 1px solid var(--calc-border);
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  font-variant-numeric: tabular-nums;
+  user-select: text;
+}
+
+.calculation-example .value-table thead {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+.calculation-example .value-table th,
+.calculation-example .value-table td {
+  min-width: 3.5rem;
+  padding: 0.15rem 0.9rem;
+  border: 0;
+  border-bottom: 1px solid var(--calc-border);
+  text-align: right;
+  vertical-align: middle;
+}
+
+.calculation-example .value-table th {
+  background: var(--calc-result-bg);
+  color: var(--calc-muted);
+  font-weight: 600;
+}
+
+.calculation-example .value-table th + th,
+.calculation-example .value-table td + td { border-left: 1px solid var(--calc-border); }
+
+.calculation-example .value-table tbody tr:last-child td { border-bottom: 0; }
+
+.value-graph {
+  max-width: 100%;
+  height: auto;
+  font-size: 11px;
+}
+
+.value-graph__tick,
+.value-graph__name { fill: var(--calc-muted); }
+.value-graph__grid { stroke: var(--calc-border); stroke-width: 1; }
+.value-graph__axis { stroke: var(--calc-muted); stroke-width: 1; opacity: 0.6; }
+
+.value-graph__line {
+  fill: none;
+  stroke: var(--calc-series);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.value-graph__dot {
+  fill: var(--calc-series);
+  stroke: var(--calc-bg);
+  stroke-width: 2;
+}
