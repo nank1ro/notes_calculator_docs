@@ -17,6 +17,11 @@ Every line has an answer menu.
 
 Copies the result exactly as it's shown.
 
+On a [table of values](/syntax/general/tables_of_values/) line, the menu has
+**Copy table** instead. It copies the table as text, with a tab between the
+columns. On a phone, tapping the line's "9 values" opens the table; tap
+beside it to open the menu.
+
 ## Decimal places
 
 Drag the slider to show between 0 and 10 decimal places for this answer only.
